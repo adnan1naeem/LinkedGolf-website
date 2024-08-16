@@ -25,9 +25,23 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
-
+body {
+  background-color: white; /* Change this to your desired background color */
+}
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+@font-face {
+  src: local("Barlow-Medium"),
+    url("../../public/fonts/Barlow-Medium.ttf") format("truetype");
+    font-family: "Barlow-Medium";
+
+}
+@font-face {
+  src: local("Barlow-Regular"),
+    url("../../public/fonts/Barlow-Regular.ttf") format("truetype");
+    font-family: "Barlow-Regular";
+
 }
