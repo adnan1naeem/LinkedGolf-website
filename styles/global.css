@@ -30,22 +30,47 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+body {
+  background-color: white; /* Change this to your desired background color */
+}
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
 @font-face {
-    
-  src: local("AirbnbCerealLight"),
-    url("../fonts/mont-light.ttf") format("truetype");
-    font-family: "Mont-Regular"; 
-   
+  src: local("Barlow-Medium"),
+    url("../public/fonts/Barlow-Medium.ttf") format("truetype");
+    font-family: "Barlow-Medium";
 
 }
 @font-face {
-  src: local("AirbnbCerealLight"),
-    url("../public/fonts/Mont-Bold.ttf") format("truetype");
-    font-family: "Mont-Bold";
+  src: local("Barlow-Regular"),
+    url("../public/fonts/Barlow-Regular.ttf") format("truetype");
+    font-family: "Barlow-Regular";
 
-}
-@font-face {
-  font-family: "Acme-Regular";  
-  src: local("AirbnbCerealLight"),
-    url("../fonts/Acme-Regular.ttf") format("truetype");
 }

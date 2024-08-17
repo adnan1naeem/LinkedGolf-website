@@ -1,15 +1,12 @@
 import "../styles/global.css";
 
-import Footer from "../components/Footer/Footer";
-// import '@/styles/globals.css'
-import Navbar from "../components/Navbar/Navbar";
 
 export default function App({ Component, pageProps }) {
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
       <Component {...pageProps} />
-      <Footer />
+      {/* <Footer /> */}
       <style jsx global>{`
         html,
         body {
