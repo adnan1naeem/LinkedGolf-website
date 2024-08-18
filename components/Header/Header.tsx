@@ -38,7 +38,7 @@ const Header = () => {
                     marginLeft: '10%',
                     marginRight: '10%',
                     borderRadius: 50,
-                    padding: 2,
+                    padding: {xs:1,sm:1,md:1,ld:2},
                     mt: 2,
                 }}
             >
@@ -100,8 +100,8 @@ const Header = () => {
                         <Link href="/" sx={{ flexShrink: 0 }}>
                             <Image
                                 src="/Vector.svg"
-                                width={140}
-                                height={70}
+                                width={110}
+                                height={30}
                                 alt="header-logo"
                             />
                         </Link>

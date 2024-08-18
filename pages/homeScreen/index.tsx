@@ -8,9 +8,10 @@ import CenteredComponent from "../../components/CenteredComponent";
 import CenteredComponent2 from "../../components/CenteredComponent2";
 import JoinCommunity from "../../components/Community/Index";
 import GolfCourseCTA from "../../components/GolfCourseCTA/golfCourse";
+import Footer from "../../components/Footer/Footer";
 const homeScreen = () => {
     return (
-        <div style={{ background: "transparent", flex: 1 }}>
+        <div style={{ background: "transparent", flex: 1,}}>
             <div style={{ flex: 1, background: 'linear-gradient(180deg, #EFFFE7 5%, #E7F2FF 100%)' }}>
                 <Header />
                 <MainBanner
@@ -79,6 +80,7 @@ const homeScreen = () => {
                 androidButtonText="Download for Android"
                 imageBackground={true}
             />
+            <Footer/>
         </div>
     );
 }

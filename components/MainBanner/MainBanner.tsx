@@ -77,7 +77,7 @@ const MainBanner: React.FC<MainBannerProps> = ({
                                 iconState={true}
                                 variant="secondary"
                                 onClick={() => alert(`${androidButtonText} button clicked!`)}
-                                sx={{ width: { xs: '80%', sm: '80%', md: '60%', lg: 'auto' } }}
+                                sx={{ width: { xs: imageBackground?"85%":'80%', sm: imageBackground?"85%":'80%', md: '60%', lg: 'auto' } }}
                             >
                                 {androidButtonText}
                             </CustomButton>

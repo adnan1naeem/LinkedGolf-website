@@ -15,7 +15,7 @@ const ImageContainer = styled(Box)(({ theme }) => ({
     borderRadius: "10px",
     
     [theme.breakpoints.down('md')]: {
-        marginLeft:"30px",
+        // marginLeft:"30px",
         borderRadius: "40px",
         height: '100%', // Adjust height for mobile/tablet
     },
