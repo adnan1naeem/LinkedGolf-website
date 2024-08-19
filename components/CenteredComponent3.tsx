@@ -39,7 +39,7 @@ const CenteredComponent3: React.FC<Props> = ({  title, description, image, botto
         },
         [theme.breakpoints.up('lg')]: {
             objectFit: 'none',
-            height: '420px',
+            height: '440px',
         },
         [theme.breakpoints.up('xl')]: {
             height: '500px',

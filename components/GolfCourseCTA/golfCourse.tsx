@@ -59,14 +59,14 @@ const GolfCourseCTA: React.FC<Props> = ({ backgroundImage, title, buttonText, im
                 }
             }}>
             <LeftSide>
-                <Typography color={"#2A2A2A"} fontSize={{ sm: "16px", md: "20px", lg: "40px" }} fontWeight={"bold"} lineHeight={{ sm: "20px", md: "28px", lg: "48px" }} sx={{ textAlign: "center", paddingLeft: '10%', paddingRight: '10%' }} gutterBottom>
+                <Typography color={"#2A2A2A"} fontSize={{ sm: "16px", md: "20px", lg: "40px" }} fontWeight={"bold"}  lineHeight={{ sm: "20px", md: "28px", lg: "48px" }} sx={{ textAlign: "center", paddingLeft: '10%', paddingRight: '10%' }} gutterBottom>
                     {title}
                 </Typography>
                 <CustomButton
                     iconState={false}
                     variant="secondary"
                     onClick={() => alert('Button clicked!')}
-                    sx={{ width: { xs: '65%', sm: '40%', md: '70%', lg: 'auto' }, border: '1px solid black', alignSelf: 'center', color: "black", fontSize: { lg: "18px", md: "16px" } }}>
+                    sx={{ width: { xs: '65%', sm: '40%', md: '70%', lg: 'auto' },marginTop:{xs:"15px",lg:'0px'}, border: '1px solid black', alignSelf: 'center', color: "black", fontSize: { lg: "18px", md: "16px" } }}>
                     {buttonText}
                 </CustomButton>
             </LeftSide>

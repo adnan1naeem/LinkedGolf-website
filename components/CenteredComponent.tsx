@@ -25,7 +25,7 @@ const CenteredComponent: React.FC<Props> = ({ backgroundImage, title, descriptio
             height: '450px',
         },
         [theme.breakpoints.up('lg')]: {
-            height: '420px',
+            height: '450px',
             objectFit: 'none',
         },
         [theme.breakpoints.up('xl')]: {

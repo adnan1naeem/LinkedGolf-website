@@ -19,7 +19,7 @@ const index = () => {
                 <MainBanner
                     title="Got Golf Buddies?"
                     description="LinkedGolf is an app designed to help you build your golf network. Get out on the course more often by scheduling outings with your buddies whose golf availability matches yours."
-                    imageUrl="/MainBanner.webp"
+                    imageUrl="/MainBanner.png"
                     showImageOnLeft={false}
                     iosButtonText="Download for iOS"
                     androidButtonText="Download for Android"
@@ -32,7 +32,7 @@ const index = () => {
                 backgroundImage="/whitebackground.png"
                 title="Golf Buddies Fore-Life"
                 description="Okay, that was a bad joke but we couldn’t help ourselves. The point to be made is that building your golf network in the Linked Golf app allows you to maintain friendships over a lifetime. Think of how much golf can be played! Or think about how much golf you could be missing out on by not having the Linked Golf app. Just saying."
-                image="/sidemobile.webp"
+                image="/sidemobile.png"
             />
             <CenteredComponent3
                 courses={""}
@@ -40,13 +40,13 @@ const index = () => {
                 backgroundcolor="#E9F3FF"
                 title="Designed to help you fill out your foreee-some."
                 description="Opps! We did it again. But, seriously that’s what this app is all about. We’re golfers ourselves. All we want to do is golf more and help other people golf more. It’s that simple."
-                image="/bluesidemobile.webp"
+                image="/bluesidemobile.png"
             />
             <CenteredComponent
                 backgroundImage="/greenbg.png"
-                title="Golf Buddies Fore-Life"
-                description="Okay, that was a bad joke but we couldn’t help ourselves. The point to be made is that building your golf network in the Linked Golf app allows you to maintain friendships over a lifetime. Think of how much golf can be played! Or think about how much golf you could be missing out on by not having the Linked Golf app. Just saying."
-                image="/greensidemobile.webp"
+                title="Don’t want to be the one to schedule an event?"
+                description="That’s cool, all you have to do is request to join an open outing."
+                image="/greensidemobile.png"
             />
             <CenterComponentBottom
                 courses={""}

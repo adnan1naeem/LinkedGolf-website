@@ -22,9 +22,6 @@ const CenteredComponent2: React.FC<Props> = ({ backgroundImage, title, descripti
     ));
     const StyledImage = styled('img')(({ theme }) => ({
         objectFit: 'cover',
-        position: 'relative',
-        width: '100%',
-        zIndex: 1,
         [theme.breakpoints.up('xs')]: {
             objectFit: 'cover',
             height: '450px',
@@ -46,16 +43,6 @@ const CenteredComponent2: React.FC<Props> = ({ backgroundImage, title, descripti
         [theme.breakpoints.up('xl')]: {
             height: '500px',
         },
-        '&::before': {
-        content: '""',
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
-        background: 'radial-gradient(circle at center, rgba(181, 218, 252, 0.5), transparent 80%)',
-        zIndex: 2,
-    },
     }));
     const BottomImage = styled('img')({
         width: '100%',
@@ -91,7 +78,7 @@ const CenteredComponent2: React.FC<Props> = ({ backgroundImage, title, descripti
                     }}
                 >
                     <Grid item xs={16} lg={6}>
-                        <Box position="relative" display="flex" justifyContent="center" marginLeft={{ lg: "50px" }}>
+                        <Box position="relative" display="flex" justifyContent="center" marginTop={{xs:courses?"20px":"0px"}} marginLeft={{ lg: "50px" }}>
                             <StyledImage src={image} alt="Golf Buddies" />
                         </Box>
                     </Grid>
@@ -110,7 +97,7 @@ const CenteredComponent2: React.FC<Props> = ({ backgroundImage, title, descripti
                         display: 'flex',
                         justifyContent: 'center',
                         alignItems: 'center',
-                        mt: -8,
+                        mt: {xs:-2,lg:-8},
                     }}
                 >
                     <BottomImage src={bottomImage} alt="Bottom Image" />
