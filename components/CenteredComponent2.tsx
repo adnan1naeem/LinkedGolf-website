@@ -46,7 +46,7 @@ const CenteredComponent2: React.FC<Props> = ({ backgroundImage, title, descripti
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                py: bottomImage ? undefined : { xs: 10, lg: 16 }, // Avoid assigning false
+                py: bottomImage ? undefined : { xs: 10, lg: 16 },
                 textAlign: { xs: 'center', lg: 'left' },
                 flexDirection: 'column',
             }}

@@ -45,15 +45,14 @@ const NumberBox = styled(Box)<NumberBoxProps>(({ theme, $isComma }) => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: $isComma?"end":'center',
-    padding: $isComma ? '3px' : '10px',
     fontFamily:"Quicksand-Bold",
     backgroundColor: $isComma ? 'transparent' : '#032F5B',
     color: $isComma ? '#032F5B' : '#fff',
     borderRadius: '8px',
     margin: $isComma ? '0 0 0 0px' : '0 2px',
-    minWidth: $isComma?"25px":'45px',
-    minHeight: '45px',
-    fontSize: '24px',
+    minWidth: $isComma?"25px":'50px',
+    minHeight: '50px',
+    fontSize: '40px',
     [theme.breakpoints.down('md')]: {
         padding: '0px',
         fontSize: '14px',
@@ -96,6 +95,8 @@ const JoinCommunitySection: React.FC = () => {
                         alignItems: 'center',
                         justifyContent: 'center',
                         height: '100%',
+                        borderRadius:'0px 20px 20px 0px',
+                        boxShadow: '4px 4px 10px #B5DAFC80',
                     }}
                 >
                     <Box
@@ -112,7 +113,7 @@ const JoinCommunitySection: React.FC = () => {
                             <img
                                 src="/golfcourt.png"
                                 alt="Golf Course"
-                                style={{ width: '100%', height: '100%', objectFit: 'cover',borderRadius:'10px' }}
+                                style={{ width: '100%', height: '100%', objectFit: 'cover',borderRadius:'10px 0px 0px 10px' }}
                             />
                         </ImageContainer>
                     </Box>
@@ -123,11 +124,13 @@ const JoinCommunitySection: React.FC = () => {
                             justifyContent: 'center',
                             alignItems: 'center',
                             width: '100%',
+                           
+
                             height: { xl: "49vh", lg: '55vh', md: "43vh", sm: "34vh", xs: "24vh" },
                         }}
                     >
                         <ContentContainer>
-                            <Typography fontSize={{ sm: '16px', md: "25px", lg: "40px" }} color={"black"} fontWeight={"bold"} gutterBottom textAlign="center">
+                            <Typography fontSize={{ sm: '16px', md: "25px", lg: "40px" }} lineHeight={{ sm: '20px', md: "27px", lg: "48px" }} color={"#2A2A2A"} fontWeight={"bold"} gutterBottom textAlign="center">
                                 Join the hottest golfer community right now.
                             </Typography>
                             <Box display="flex" justifyContent="center">

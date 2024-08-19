@@ -56,7 +56,7 @@ function GolfSection({ title, description, iconPath }: SectionProps) {
                             {title}
                         </Typography>
                     </Stack>
-                    <Typography variant="body2" color="text.secondary" mt={1}>
+                    <Typography fontFamily={"Barlow-Regular"} color={"#032F5B"} fontSize={"18px"} mt={1}>
                         {description}
                     </Typography>
                 </CardContent>
@@ -68,7 +68,7 @@ function GolfSection({ title, description, iconPath }: SectionProps) {
 function GolfComponent() {
     return (
         <div style={{backgroundColor:"#DAECFD"}}>
-            <Container maxWidth="lg" sx={{ bgcolor: '#DAECFD', py: 8 }}>
+            <Container maxWidth="lg" sx={{ bgcolor: '#DAECFD', py: 3 }}>
             <Grid
                 container
                 spacing={2}
