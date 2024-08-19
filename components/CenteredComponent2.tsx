@@ -15,6 +15,12 @@ interface Props {
 }
 
 const CenteredComponent2: React.FC<Props> = ({ backgroundImage, title, description, image, bottomImage, backgroundcolor, courses, golfer }) => {
+    const formattedDescription = description.split('\n').map((line, index) => (
+        <Typography fontSize={{ xs: 18, md: 18, lg: 18 }}textAlign={"left"} lineHeight={{ lg: "26px" }} component="p" fontFamily={"Barlow-Medium"} color={"#2A2A2A"} mb={{ xs: 0, lg: 2 }}>
+        {line}
+    </Typography>
+    ));
+
     const StyledImage = styled('img')({
         height: '50vh',
         width: '100%',
@@ -64,9 +70,7 @@ const CenteredComponent2: React.FC<Props> = ({ backgroundImage, title, descripti
                         <Typography fontSize={{ xs: 20, md: 35, lg: 40 }} textAlign={"left"} fontWeight="bold" color={"#2A2A2A"} sx={{ marginBottom: { xs: 4, lg: 6 } }} >
                             {title}
                         </Typography>
-                        <Typography fontSize={{ xs: 18, md: 18, lg: 18 }}textAlign={"left"} lineHeight={{ lg: "26px" }} component="p" fontFamily={"Barlow-Medium"} color={"#2A2A2A"} mb={{ xs: 0, lg: 8 }}>
-                            {description}
-                        </Typography>
+                       <Box>{formattedDescription}</Box>
                         {courses&& <StatsSection/>}
                     </Grid>
                 </Grid>
