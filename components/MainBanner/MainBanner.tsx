@@ -35,8 +35,8 @@ const MainBanner: React.FC<MainBannerProps> = ({
                     : 'transparent',
                 display: 'flex',
                 flex: 1,
-                paddingTop:{xs:imageBackground&&'30px'},
-                py:imageBackground?undefined: { xs: 10, lg: 16 },
+                paddingTop: { xs: imageBackground && '30px' },
+                py: imageBackground ? undefined : { xs: 8, lg: 8 },
                 textAlign: imageBackground ? 'left' : { xs: 'center', lg: 'left' },
             }}
         >
@@ -49,7 +49,7 @@ const MainBanner: React.FC<MainBannerProps> = ({
                     direction={showImageOnLeft ? 'row-reverse' : 'row'}
                 >
                     <Grid item xs={12} lg={6}>
-                        <Typography fontSize={{ xs: "28px", md: "50px", lg:imageBackground?"40px": "60px" }} fontWeight="bold" color="#2A2A2A" sx={{ marginBottom: { xs: "4px", lg: "8px" } }}>
+                        <Typography fontSize={{ xs: "28px", md: "50px", lg: imageBackground ? "40px" : "60px" }} fontWeight="bold" color="#2A2A2A" sx={{ marginBottom: { xs: "4px", lg: "8px" } }}>
                             {title}
                         </Typography>
                         <Typography variant="h6" component="p" fontFamily="Barlow-Regular" color="#2A2A2A" mb={8}>
@@ -59,7 +59,7 @@ const MainBanner: React.FC<MainBannerProps> = ({
                         <Box
                             display="flex"
                             justifyContent={{ xs: 'center', md: 'center', lg: 'flex-start' }}
-                            alignItems={imageBackground?"baseline":"center"}
+                            alignItems={imageBackground ? "baseline" : "center"}
                             flexDirection={{ xs: 'column', lg: 'row' }}
                             alignSelf={{ md: 'center' }}
                             gap={2}
@@ -77,7 +77,7 @@ const MainBanner: React.FC<MainBannerProps> = ({
                                 iconState={true}
                                 variant="secondary"
                                 onClick={() => window.open('https://play.google.com/store/apps/details?id=com.linkedgolfapp.mobile', '_blank')}
-                                sx={{ width: { xs: imageBackground?"85%":'80%', sm: imageBackground?"85%":'80%', md: '60%', lg: 'auto' } }}
+                                sx={{ width: { xs: imageBackground ? "85%" : '80%', sm: imageBackground ? "85%" : '80%', md: '60%', lg: 'auto' } }}
                             >
                                 {androidButtonText}
                             </CustomButton>

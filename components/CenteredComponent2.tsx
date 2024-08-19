@@ -16,14 +16,14 @@ interface Props {
 
 const CenteredComponent2: React.FC<Props> = ({ backgroundImage, title, description, image, bottomImage, backgroundcolor, courses, golfer }) => {
     const formattedDescription = description.split('\n').map((line, index) => (
-        <Typography fontSize={{ xs: 18, md: 18, lg: 18 }}textAlign={"left"} lineHeight={{ lg: "26px" }} component="p" fontFamily={"Barlow-Medium"} color={"#2A2A2A"} mb={{ xs: 0, lg: 2 }}>
+        <Typography fontSize={{ xs: "18px", md: "18px", lg: "18px" }}textAlign={"left"} lineHeight={{ lg: "26px" }} component="p" fontFamily={"Barlow-Medium"} color={"#2A2A2A"} mb={{ xs: 0, lg: 2 }}>
         {line}
     </Typography>
     ));
 
     const StyledImage = styled('img')({
-        height: '50vh',
-        width: '100%',
+        height: '75vh',
+        width: '80%',
         maxWidth: '700px',
         objectFit: 'contain',
     });
@@ -67,7 +67,7 @@ const CenteredComponent2: React.FC<Props> = ({ backgroundImage, title, descripti
                         </Box>
                     </Grid>
                     <Grid item xs={12} lg={6}>
-                        <Typography fontSize={{ xs: 20, md: 35, lg: 40 }} textAlign={"left"} fontWeight="bold" color={"#2A2A2A"} sx={{ marginBottom: { xs: 4, lg: 6 } }} >
+                        <Typography fontSize={{ xs: "20px", md: "35px", lg: "40px" }} textAlign={"left"} fontWeight="bold" color={"#2A2A2A"} sx={{ marginBottom: { xs: 4, lg: 6 } }} >
                             {title}
                         </Typography>
                        <Box>{formattedDescription}</Box>
