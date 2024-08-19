@@ -1,7 +1,6 @@
-// src/theme.ts
 "use client";
 import { createTheme } from '@mui/material/styles';
-import '@fontsource/inter'; // Import the font
+import '@fontsource/inter';
 
 const theme = createTheme({
   typography: {
@@ -17,11 +16,10 @@ const theme = createTheme({
     MuiButton: {
       styleOverrides: {
         root: {
-          fontFamily: 'Inter', // Set Inter font for Button
+          fontFamily: 'Inter',
         },
       },
     },
-    // Add other component style overrides if needed
   },
 });
 

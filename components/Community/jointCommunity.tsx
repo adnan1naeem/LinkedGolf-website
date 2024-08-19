@@ -15,9 +15,8 @@ const ImageContainer = styled(Box)(({ theme }) => ({
     borderRadius: "10px",
     
     [theme.breakpoints.down('md')]: {
-        // marginLeft:"30px",
         borderRadius: "40px",
-        height: '100%', // Adjust height for mobile/tablet
+        height: '100%',
     },
 }));
 
@@ -45,13 +44,14 @@ const ContentContainer = styled(Box)(({ theme }) => ({
 const NumberBox = styled(Box)<NumberBoxProps>(({ theme, $isComma }) => ({
     display: 'flex',
     justifyContent: 'center',
-    alignItems: 'center',
+    alignItems: $isComma?"end":'center',
     padding: $isComma ? '3px' : '10px',
+    fontFamily:"Quicksand-Bold",
     backgroundColor: $isComma ? 'transparent' : '#032F5B',
-    color: $isComma ? '#032F5B' : '#fff', // Updated color for non-comma
+    color: $isComma ? '#032F5B' : '#fff',
     borderRadius: '8px',
-    margin: $isComma ? '0 0 0 4px' : '0 2px', // Adjust margin to avoid extra space around comma
-    minWidth: '45px',
+    margin: $isComma ? '0 0 0 0px' : '0 2px',
+    minWidth: $isComma?"25px":'45px',
     minHeight: '45px',
     fontSize: '24px',
     [theme.breakpoints.down('md')]: {
@@ -59,14 +59,14 @@ const NumberBox = styled(Box)<NumberBoxProps>(({ theme, $isComma }) => ({
         fontSize: '14px',
         minWidth: '21px',
         minHeight: '21px',
-        margin: $isComma ? '0 0 0 4px' : '0 2px', // Adjust margin for medium devices
+        margin: $isComma ? '0 0 0 4px' : '0 2px',
     },
     [theme.breakpoints.down('sm')]: {
         padding: '0px',
         fontSize: '14px',
         minWidth: '21px',
         minHeight: '21px',
-        margin: $isComma ? '0 0 0 4px' : '0 2px', // Adjust margin for small devices
+        margin: $isComma ? '0 0 0 4px' : '0 2px',
     },
 }));
 

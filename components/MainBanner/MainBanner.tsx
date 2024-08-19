@@ -68,7 +68,7 @@ const MainBanner: React.FC<MainBannerProps> = ({
                             <CustomButton
                                 iconState={true}
                                 variant="primary"
-                                onClick={() => alert(`${iosButtonText} button clicked!`)}
+                                onClick={() => window.open('https://apps.apple.com/us/app/linked-golf/id1619093321', '_blank')}
                                 sx={{ width: { xs: '80%', sm: '80%', md: '60%', lg: 'auto' } }}
                             >
                                 {iosButtonText}
@@ -76,7 +76,7 @@ const MainBanner: React.FC<MainBannerProps> = ({
                             <CustomButton
                                 iconState={true}
                                 variant="secondary"
-                                onClick={() => alert(`${androidButtonText} button clicked!`)}
+                                onClick={() => window.open('https://play.google.com/store/apps/details?id=com.linkedgolfapp.mobile', '_blank')}
                                 sx={{ width: { xs: imageBackground?"85%":'80%', sm: imageBackground?"85%":'80%', md: '60%', lg: 'auto' } }}
                             >
                                 {androidButtonText}

@@ -17,8 +17,8 @@ const Header = () => {
     }, []);
 
     const socialMediaIcons = [
-        { href: '#', src: '/facebook.svg', alt: 'Facebook', color: '#1877F2' },
-        { href: '#', src: '/instagram.svg', alt: 'Instagram', color: '#E1306C' },
+        { href: 'https://www.facebook.com/LinkedGolfApp', src: '/facebook.svg', alt: 'Facebook', color: '#1877F2' },
+        { href: 'https://www.instagram.com/linkedgolfapp/?hl=en', src: '/instagram.svg', alt: 'Instagram', color: '#E1306C' },
         { href: '#', src: '/twitter.svg', alt: 'Twitter', color: '#1DA1F2' },
         { href: '#', src: '/linkedin.svg', alt: 'LinkedIn', color: '#0A66C2' },
         { href: '#', src: '/rabbit.svg', alt: 'Reddit', color: '#FF4500' },

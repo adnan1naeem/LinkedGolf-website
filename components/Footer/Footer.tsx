@@ -4,8 +4,8 @@ import { Box, Container, Grid, Typography, Link, IconButton } from '@mui/materia
 import Image from 'next/image';
 const Footer: React.FC = () => {
     const socialMediaIcons = [
-        { href: '#', src: '/facebook.svg', alt: 'Facebook', color: '#1877F2' },
-        { href: '#', src: '/instagram.svg', alt: 'Instagram', color: '#E1306C' },
+        { href: 'https://www.facebook.com/LinkedGolfApp', src: '/facebook.svg', alt: 'Facebook', color: '#1877F2' },
+        { href: 'https://www.instagram.com/linkedgolfapp/?hl=en', src: '/instagram.svg', alt: 'Instagram', color: '#E1306C' },
         { href: '#', src: '/twitter.svg', alt: 'Twitter', color: '#1DA1F2' },
         { href: '#', src: '/linkedin.svg', alt: 'LinkedIn', color: '#0A66C2' },
         { href: '#', src: '/rabbit.svg', alt: 'Reddit', color: '#FF4500' },
@@ -16,7 +16,6 @@ const Footer: React.FC = () => {
             sx={{
                 background: 'linear-gradient(180deg, #EFFFE7 5%, #E7F2FF 100%)',
                 py: 4,
-                borderTop: '1px solid #E0E0E0',
             }}
         >
               <Container maxWidth={false} sx={{ maxWidth: { md: "1000px", lg: "1280px", xl: '1450px' }, width: '100%' }}>
@@ -62,7 +61,7 @@ const Footer: React.FC = () => {
                         </Box>
                     </Grid>
                     <Grid item xs={12} md={4} display="flex" flexDirection={{ md: "row", lg: "column" }} gap={{ lg: '20px' }} justifyContent={"space-between"} alignItems={{ xs: 'center', md: 'center' }}>
-                        <Link href="#" underline="none" fontSize={{ md: "14px", lg: "20px" }} fontFamily={"Barlow-Medium"} color="primary" sx={{ mb: 1 }}>
+                        <Link href="/deleteAccount" underline="none" fontSize={{ md: "14px", lg: "20px" }} fontFamily={"Barlow-Medium"} color="primary" sx={{ mb: 1 }}>
                             Delete Account
                         </Link>
                         <Link href="#" underline="none" color="primary" fontFamily={"Barlow-Medium"} fontSize={{ md: "14px", lg: "20px" }} sx={{ mb: 1 }}>
@@ -71,7 +70,7 @@ const Footer: React.FC = () => {
                         <Link href="#" underline="none" color="primary" fontFamily={"Barlow-Medium"} fontSize={{ md: "14px", lg: "20px" }} sx={{ mb: 1 }}>
                             Report a Problem
                         </Link>
-                        <Link href="#" underline="none" fontSize={{ md: "14px", lg: "20px" }} fontFamily={"Barlow-Medium"} display={{ xs: "none", md: "block", lg: "block" }} color="primary" sx={{ mb: 1 }}>
+                        <Link href="/privacy" underline="none" fontSize={{ md: "14px", lg: "20px" }} fontFamily={"Barlow-Medium"} display={{ xs: "none", md: "block", lg: "block" }} color="primary" sx={{ mb: 1 }}>
                             Privacy Policy
                         </Link>
                         <Typography variant="body2" display={{ xs: "none", md: "none", lg: "block" }} fontSize={"20px"} fontFamily={"Barlow-Regular"} color="#AAAAAA" mt={2}>
@@ -79,7 +78,7 @@ const Footer: React.FC = () => {
                         </Typography>
                     </Grid>
                     <Grid item xs={12} md={4} display="flex" flexDirection={{ md: "row", lg: "column" }} sx={{ display: { md: "block", lg: "none" } }} justifyContent={"space-between"} alignItems={{ xs: 'center', md: 'center' }}>
-                        <Link href="#" underline="none" fontSize={{ md: "14px", lg: "20px" }} fontFamily={"Barlow-Medium"} display={{ xs: "block", md: "block", lg: "none" }} color="primary" sx={{ mb: 1 }}>
+                        <Link href="/privacy" underline="none" fontSize={{ md: "14px", lg: "20px" }} fontFamily={"Barlow-Medium"} display={{ xs: "block", md: "block", lg: "none" }} color="primary" sx={{ mb: 1 }}>
                             Privacy Policy
                         </Link>
                     </Grid>
@@ -95,8 +94,8 @@ const Footer: React.FC = () => {
                             </Typography>
                             <img src="/qr-code.png" alt="QR Code" style={{ width: '150px', marginBottom: '8px' }} />
                             <Box display="flex" justifyContent="center" gap={1}>
-                                <img src="/AndroidButton.png" alt="App Store" style={{ width: '120px' }} />
-                                <img src="/iosButton.png" alt="Google Play" style={{ width: '120px' }} />
+                                <img src="/AndroidButton.png" alt="App Store" onClick={() => window.open('https://play.google.com/store/apps/details?id=com.linkedgolfapp.mobile', '_blank')} style={{ width: '120px' }} />
+                                <img src="/iosButton.png" alt="Google Play"onClick={() => window.open('https://apps.apple.com/us/app/linked-golf/id1619093321', '_blank')} style={{ width: '120px' }} />
                             </Box>
                         </Box>
                     </Grid>

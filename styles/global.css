@@ -74,3 +74,9 @@ body {
     font-family: "Barlow-Regular";
 
 }
+@font-face {
+  src: local("Quicksand-Bold"),
+    url("../public/fonts/Quicksand-Bold.ttf") format("truetype");
+    font-family: "Quicksand-Bold";
+
+}
