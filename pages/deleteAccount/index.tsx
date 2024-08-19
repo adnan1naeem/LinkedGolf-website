@@ -15,7 +15,12 @@ const index = () => {
                     description="If you decide to delete your account, your profile, including your schedule, will be permanently removed.Below are the steps to delete your account"
                 />
             </div>
-            <DeleteAccountSteps />
+            <DeleteAccountSteps 
+            image1={"/Image1.png"}
+            image2={"/Image2.png"}
+            image3={"/Image3.png"}
+            image4={"/Image4.png"}
+            />
             <Footer />
         </div>
     );

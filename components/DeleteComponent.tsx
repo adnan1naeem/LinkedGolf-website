@@ -1,7 +1,13 @@
 import React from 'react';
 import { Box, Typography, Grid, Paper } from '@mui/material';
 
-const StepCard = ({ step, description, children }: { step: string, description: string, children: React.ReactNode }) => (
+type StepCardProps = {
+    step: string;
+    description: string;
+    children: React.ReactNode;
+};
+
+const StepCard = ({ step, description, children }: StepCardProps) => (
     <Box sx={{ textAlign: 'center', mb: 2 }}>
         <Typography
             variant="h6"
@@ -38,7 +44,14 @@ const StepCard = ({ step, description, children }: { step: string, description: 
     </Box>
 );
 
-const DeleteAccountSteps = () => {
+type DeleteAccountStepsProps = {
+    image1: string;
+    image2: string;
+    image3: string;
+    image4: string;
+};
+
+const DeleteAccountSteps = ({ image1, image2, image3, image4 }: DeleteAccountStepsProps) => {
     return (
         <Box
             sx={{
@@ -52,7 +65,7 @@ const DeleteAccountSteps = () => {
                     <StepCard step="Step 1" description="Click on settings">
                         <Box
                             component="img"
-                            src="/image1.png"
+                            src={image1}
                             alt="Step 1 Image"
                             sx={{
                                 width: { md: "200px", lg: '210px', xl: "255px" },
@@ -66,13 +79,12 @@ const DeleteAccountSteps = () => {
                     <StepCard step="Step 2" description="Click on leave feedback">
                         <Box
                             component="img"
-                            src="/image2.png"
+                            src={image2}
                             alt="Step 2 Image"
                             sx={{
                                 width: { md: "200px", lg: '210px', xl: "255px" },
                                 height: 400,
                                 objectFit: 'cover',
-
                             }}
                         />
                     </StepCard>
@@ -81,7 +93,7 @@ const DeleteAccountSteps = () => {
                     <StepCard step="Step 3" description="Click on delete account">
                         <Box
                             component="img"
-                            src="/image3.png"
+                            src={image3}
                             alt="Step 3 Image"
                             sx={{
                                 width: { md: "200px", lg: '210px', xl: "255px" },
@@ -95,7 +107,7 @@ const DeleteAccountSteps = () => {
                     <StepCard step="Step 4" description="Click on delete option">
                         <Box
                             component="img"
-                            src="/image4.png"
+                            src={image4}
                             alt="Step 4 Image"
                             sx={{
                                 width: { md: "200px", lg: '210px', xl: "255px" },

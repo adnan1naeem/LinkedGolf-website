@@ -64,10 +64,10 @@ const Footer: React.FC = () => {
                         <Link href="/deleteAccount" underline="none" fontSize={{ md: "14px", lg: "20px" }} fontFamily={"Barlow-Medium"} color="primary" sx={{ mb: 1 }}>
                             Delete Account
                         </Link>
-                        <Link href="#" underline="none" color="primary" fontFamily={"Barlow-Medium"} fontSize={{ md: "14px", lg: "20px" }} sx={{ mb: 1 }}>
+                        <Link target="_blank"  rel="noopener noreferrer" href="https://docs.google.com/forms/d/e/1FAIpQLSfUO8dpIaYXK2AKAgM0IXKMU3epDVSI2Tt1Qf3MFocIwDtmBg/viewform" underline="none" color="primary" fontFamily={"Barlow-Medium"} fontSize={{ md: "14px", lg: "20px" }} sx={{ mb: 1 }}>
                             Contact Us
                         </Link>
-                        <Link href="#" underline="none" color="primary" fontFamily={"Barlow-Medium"} fontSize={{ md: "14px", lg: "20px" }} sx={{ mb: 1 }}>
+                        <Link target="_blank"  rel="noopener noreferrer" href="https://docs.google.com/forms/d/e/1FAIpQLSdGXCY3Hhn0-dPqETL7zqlS1FXt_CPmcse2QO1vp0j-UPqlNg/viewform?pli=1" underline="none" color="primary" fontFamily={"Barlow-Medium"} fontSize={{ md: "14px", lg: "20px" }} sx={{ mb: 1 }}>
                             Report a Problem
                         </Link>
                         <Link href="/privacy" underline="none" fontSize={{ md: "14px", lg: "20px" }} fontFamily={"Barlow-Medium"} display={{ xs: "none", md: "block", lg: "block" }} color="primary" sx={{ mb: 1 }}>
