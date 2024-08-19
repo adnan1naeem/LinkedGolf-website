@@ -11,71 +11,66 @@ interface Props {
     bottomImage?: string;
     backgroundcolor: string;
     courses: string;
-    golfer: string;
 }
 
-const CenteredComponent2: React.FC<Props> = ({ backgroundImage, title, description, image, bottomImage, backgroundcolor, courses, golfer }) => {
+const CenteredComponent3: React.FC<Props> = ({  title, description, image, bottomImage, backgroundcolor, courses }) => {
     const formattedDescription = description.split('\n').map((line, index) => (
-        <Typography fontSize={{ xs: "18px", md: "18px", lg: "18px" }} textAlign={"left"} lineHeight={{ lg: "26px" }} component="p" fontFamily={"Barlow-Medium"} color={"#2A2A2A"} mb={{ xs: 0, lg: 2 }}>
-            {line}
-        </Typography>
+        <Typography fontSize={{ xs: "18px", md: "18px", lg: "18px" }}textAlign={"left"} lineHeight={{ lg: "26px" }} component="p" fontFamily={"Barlow-Medium"} color={"#2A2A2A"} mb={{ xs: 0, lg: 2 }}>
+        {line}
+    </Typography>
     ));
+
     const StyledImage = styled('img')(({ theme }) => ({
-        objectFit: 'cover',
         position: 'relative',
         width: '100%',
         zIndex: 1,
+    
         [theme.breakpoints.up('xs')]: {
-            objectFit: 'cover',
+            objectFit: 'none',
             height: '450px',
-             marginTop:'-30px',
         },
         [theme.breakpoints.up('sm')]: {
-            marginTop:'-30px',
-            objectFit: 'cover',
+            objectFit: 'none',
             height: '450px',
         },
         [theme.breakpoints.up('md')]: {
-            objectFit: 'cover',
+            objectFit: 'none',
             height: '450px',
         },
         [theme.breakpoints.up('lg')]: {
-            height: '450px',
-            objectFit: 'contain',
+            objectFit: 'none',
+            height: '420px',
         },
         [theme.breakpoints.up('xl')]: {
             height: '500px',
         },
+    
         '&::before': {
-        content: '""',
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
-        background: 'radial-gradient(circle at center, rgba(181, 218, 252, 0.5), transparent 80%)',
-        zIndex: 2,
-    },
+            content: '""',
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            backgroundColor: 'rgba(181, 218, 252, 0.5)', // Semi-transparent background color
+            zIndex: 2,
+        },
     }));
-    const BottomImage = styled('img')({
-        width: '100%',
-        maxWidth: '100%',
-        objectFit: 'contain',
-        marginTop: '-20px',
-    });
+    
+
 
     return (
         <Box
             sx={{
-                backgroundImage: backgroundImage ? `url(${backgroundImage})` : 'none',
-                backgroundColor: backgroundImage ? 'transparent' : backgroundcolor,
+                backgroundImage:  'none',
+                backgroundColor: backgroundcolor,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 minHeight: '9vh',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                py: bottomImage ? undefined : { xs: 4, lg: 16 },
+                py:{ xs: 6, lg: 10 },
                 textAlign: { xs: 'center', lg: 'left' },
                 flexDirection: 'column',
             }}
@@ -96,28 +91,16 @@ const CenteredComponent2: React.FC<Props> = ({ backgroundImage, title, descripti
                         </Box>
                     </Grid>
                     <Grid item xs={12} lg={6}>
-                        <Typography fontSize={{ xs: "20px", md: "35px", lg: "40px" }} lineHeight={{xs:"28px",md:"35px",lg:"48px"}} textAlign={"left"} fontWeight="bold" color={"#2A2A2A"} sx={{ marginBottom: { xs: 2, lg: 3 } }} >
+                        <Typography fontSize={{ xs: "20px", md: "35px", lg: "40px" }} lineHeight={{xs:"28px",md:"35px",lg:"48px"}}textAlign={"left"} fontWeight="bold" color={"#2A2A2A"} sx={{ marginBottom: { xs: 4, lg: 6 } }} >
                             {title}
                         </Typography>
-                        <Box>{formattedDescription}</Box>
-                        {courses && <StatsSection />}
+                       <Box>{formattedDescription}</Box>
+                        {courses&& <StatsSection/>}
                     </Grid>
                 </Grid>
             </Container>
-            {bottomImage && (
-                <Box
-                    sx={{
-                        display: 'flex',
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                        mt: -8,
-                    }}
-                >
-                    <BottomImage src={bottomImage} alt="Bottom Image" />
-                </Box>
-            )}
         </Box>
     );
 };
 
-export default CenteredComponent2;
+export default CenteredComponent3;

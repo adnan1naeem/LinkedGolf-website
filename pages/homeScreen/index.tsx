@@ -9,6 +9,8 @@ import CenteredComponent2 from "../../components/CenteredComponent2";
 import JoinCommunity from "../../components/Community/Index";
 import GolfCourseCTA from "../../components/GolfCourseCTA/golfCourse";
 import Footer from "../../components/Footer/Footer";
+import CenterComponentBottom from "../../components/CenteredComponentBottom";
+import CenteredComponent3 from "../../components/CenteredComponent3";
 const index = () => {
     return (
         <div style={{ background: "transparent", flex: 1,}}>
@@ -32,9 +34,8 @@ const index = () => {
                 description="Okay, that was a bad joke but we couldn’t help ourselves. The point to be made is that building your golf network in the Linked Golf app allows you to maintain friendships over a lifetime. Think of how much golf can be played! Or think about how much golf you could be missing out on by not having the Linked Golf app. Just saying."
                 image="/sidemobile.webp"
             />
-            <CenteredComponent2
+            <CenteredComponent3
                 courses={""}
-                golfer={""}
                 backgroundImage=""
                 backgroundcolor="#E9F3FF"
                 title="Designed to help you fill out your foreee-some."
@@ -47,14 +48,14 @@ const index = () => {
                 description="Okay, that was a bad joke but we couldn’t help ourselves. The point to be made is that building your golf network in the Linked Golf app allows you to maintain friendships over a lifetime. Think of how much golf can be played! Or think about how much golf you could be missing out on by not having the Linked Golf app. Just saying."
                 image="/greensidemobile.webp"
             />
-            <CenteredComponent2
+            <CenterComponentBottom
                 courses={""}
                 golfer={""}
                 backgroundImage=""
                 backgroundcolor="#E9F3FF"
                 title="Find new golf courses or get rewarded for being a loyal customer."
                 description="Okay, that was a bad joke but we couldn’t help ourselves. The point to be made is that building your golf network in the Linked Golf app allows you to maintain friendships over a lifetime. Think of how much golf can be played! Or think about how much golf you could be missing out on by not having the Linked Golf app. Just saying."
-                image="/bluegolf.webp"
+                image="/MattMobile.png"
             />
             <GolfCourseCTA
                 backgroundImage="/whitebackground.png"

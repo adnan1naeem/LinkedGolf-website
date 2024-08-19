@@ -10,12 +10,29 @@ interface Props {
 }
 
 const CenteredComponent: React.FC<Props> = ({ backgroundImage, title, description, image }) => {
-    const StyledImage = styled('img')({
-        height:'55vh',
-        width: '100%',
-        maxWidth: '700px',
-        objectFit: 'contain',
-    });
+    const StyledImage = styled('img')(({ theme }) => ({
+        objectFit: 'cover',
+        [theme.breakpoints.up('xs')]: {
+            objectFit: 'none',
+            height: '450px',
+        },
+        [theme.breakpoints.up('sm')]: {
+            objectFit: 'none',
+            height: '450px',
+        },
+        [theme.breakpoints.up('md')]: {
+            objectFit: 'none',
+            height: '450px',
+        },
+        [theme.breakpoints.up('lg')]: {
+            height: '420px',
+            objectFit: 'none',
+        },
+        [theme.breakpoints.up('xl')]: {
+            height: '500px',
+        },
+        
+    }));
     return (
         <Box
             sx={{
@@ -26,7 +43,7 @@ const CenteredComponent: React.FC<Props> = ({ backgroundImage, title, descriptio
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                py: {xs:10,lg:16},
+                py: {xs:4,lg:8},
                 textAlign: { xs: 'center', lg: 'left' },
             }}
         >
@@ -38,10 +55,10 @@ const CenteredComponent: React.FC<Props> = ({ backgroundImage, title, descriptio
                     justifyContent="center"
                 >
                     <Grid item xs={15} lg={6}>
-                        <Typography fontSize={{ xs: 28, md: 35, lg: 40 }}textAlign={"left"} fontWeight="bold" color={"#2A2A2A"} sx={{ marginBottom: { xs: 4, lg: 6 } }} >
+                    <Typography fontSize={{ xs: "20px", md: "35px", lg: "40px" }} lineHeight={{xs:"28px",md:"35px",lg:"48px"}}textAlign={"left"} fontWeight="bold" color={"#2A2A2A"} sx={{ marginBottom: { xs: 4, lg: 6 } }} >
                         {title}
                         </Typography>
-                        <Typography fontSize={{ xs: 18, md: 18, lg: 18 }}textAlign={"left"} lineHeight={{lg:"26px"}} component="p" fontFamily={"Barlow-Medium"} color={"#2A2A2A"} mb={{xs:0,lg:8}}>
+                        <Typography fontSize={{ xs: "18px", md: "18px", lg: "18px" }}textAlign={"left"} lineHeight={{ lg: "26px" }} component="p" fontFamily={"Barlow-Medium"} color={"#2A2A2A"} mb={{ xs: 0, lg: 2 }}>
                            {description}
                         </Typography>
                     </Grid>

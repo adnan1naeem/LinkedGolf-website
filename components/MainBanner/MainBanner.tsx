@@ -14,7 +14,7 @@ interface MainBannerProps {
 }
 
 const StyledImage = styled('img')({
-    width: '35rem',
+    width: '45rem',
     objectFit: 'cover',
 });
 
@@ -63,7 +63,6 @@ const MainBanner: React.FC<MainBannerProps> = ({
                             flexDirection={{ xs: 'column', lg: 'row' }}
                             alignSelf={{ md: 'center' }}
                             gap={2}
-                            mb={12}
                         >
                             <CustomButton
                                 iconState={true}
