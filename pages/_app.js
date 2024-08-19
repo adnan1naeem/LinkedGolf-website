@@ -1,12 +1,14 @@
+import Head from "next/head";
 import "../styles/global.css";
 
 
 export default function App({ Component, pageProps }) {
   return (
     <div>
-      {/* <Navbar /> */}
+      <Head>
+      <link rel="icon" href="/favicon.ico" sizes="any" />
+      </Head>
       <Component {...pageProps} />
-      {/* <Footer /> */}
       <style jsx global>{`
         html,
         body {
