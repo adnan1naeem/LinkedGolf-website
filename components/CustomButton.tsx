@@ -25,7 +25,6 @@ const CustomButton: React.FC<CustomButtonProps> = ({ variant, children, onClick,
             textTransform: 'none',
             '&:hover': {
                 backgroundColor: 'primary.main',
-                border: '1px solid #0B7DE6',
                 color: 'primary.contrastText',
             },
         },

@@ -65,7 +65,7 @@ const GolfCourseCTA: React.FC<Props> = ({ backgroundImage, title, buttonText, im
                 <CustomButton
                     iconState={false}
                     variant="secondary"
-                    onClick={() => alert('Button clicked!')}
+                    onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSdfWhy_ycy5ZP5iBnzUQPHkmMQl0VH4Xrg4cMiF5WTLTzpKZw/viewform', '_blank')}
                     sx={{ width: { xs: '65%', sm: '40%', md: '70%', lg: 'auto' },marginTop:{xs:"15px",lg:'0px'}, border: '1px solid black', alignSelf: 'center', color: "black", fontSize: { lg: "18px", md: "16px" } }}>
                     {buttonText}
                 </CustomButton>
