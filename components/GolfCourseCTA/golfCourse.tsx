@@ -59,7 +59,7 @@ const GolfCourseCTA: React.FC<Props> = ({ backgroundImage, title, buttonText, im
                 }
             }}>
             <LeftSide>
-                <Typography color={"#2A2A2A"} fontSize={{ sm: "16px", md: "20px", lg: "40px" }} fontWeight={"bold"}  lineHeight={{ sm: "20px", md: "28px", lg: "48px" }} sx={{ textAlign: "center", paddingLeft: '10%', paddingRight: '10%' }} gutterBottom>
+                <Typography color={"#2A2A2A"} fontSize={{ sm: "16px", md: "20px", lg: "40px" }} fontFamily={{xs:"Quicksand-Bold",md:"default"}} fontWeight={"bold"}  lineHeight={{ sm: "20px", md: "28px", lg: "48px" }} sx={{ textAlign: "center", paddingLeft: '10%', paddingRight: '10%' }} gutterBottom>
                     {title}
                 </Typography>
                 <CustomButton
