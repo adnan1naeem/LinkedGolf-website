@@ -61,16 +61,16 @@ const Footer: React.FC = () => {
                         </Box>
                     </Grid>
                     <Grid item xs={12} md={4} display="flex" flexDirection={{ md: "row", lg: "column" }} gap={{ lg: '20px' }} justifyContent={"space-between"} alignItems={{ xs: 'center', md: 'center' }}>
-                        <Link href="/deleteAccount" underline="none" fontSize={{ md: "14px", lg: "20px" }} fontFamily={"Barlow-Medium"} color="primary" sx={{ mb: 1 }}>
+                        <Link href="/deleteAccount" underline="none" fontSize={{ md: "14px", lg: "20px" }} fontFamily={"Barlow-Medium"} color="primary" sx={{ mb: 1,'&:hover': { textDecoration: 'underline' } }}>
                             Delete Account
                         </Link>
-                        <Link target="_blank"  rel="noopener noreferrer" href="https://docs.google.com/forms/d/e/1FAIpQLSfUO8dpIaYXK2AKAgM0IXKMU3epDVSI2Tt1Qf3MFocIwDtmBg/viewform" underline="none" color="primary" fontFamily={"Barlow-Medium"} fontSize={{ md: "14px", lg: "20px" }} sx={{ mb: 1 }}>
+                        <Link target="_blank"  rel="noopener noreferrer" href="https://docs.google.com/forms/d/e/1FAIpQLSfUO8dpIaYXK2AKAgM0IXKMU3epDVSI2Tt1Qf3MFocIwDtmBg/viewform" underline="none" color="primary" fontFamily={"Barlow-Medium"} fontSize={{ md: "14px", lg: "20px" }} sx={{ mb: 1,'&:hover': { textDecoration: 'underline' } }}>
                             Contact Us
                         </Link>
-                        <Link target="_blank"  rel="noopener noreferrer" href="https://docs.google.com/forms/d/e/1FAIpQLSdGXCY3Hhn0-dPqETL7zqlS1FXt_CPmcse2QO1vp0j-UPqlNg/viewform?pli=1" underline="none" color="primary" fontFamily={"Barlow-Medium"} fontSize={{ md: "14px", lg: "20px" }} sx={{ mb: 1 }}>
+                        <Link target="_blank"  rel="noopener noreferrer" href="https://docs.google.com/forms/d/e/1FAIpQLSdGXCY3Hhn0-dPqETL7zqlS1FXt_CPmcse2QO1vp0j-UPqlNg/viewform?pli=1" underline="none" color="primary" fontFamily={"Barlow-Medium"} fontSize={{ md: "14px", lg: "20px" }} sx={{ mb: 1,'&:hover': { textDecoration: 'underline' } }}>
                             Report a Problem
                         </Link>
-                        <Link href="/privacy" underline="none" fontSize={{ md: "14px", lg: "20px" }} fontFamily={"Barlow-Medium"} display={{ xs: "none", md: "block", lg: "block" }} color="primary" sx={{ mb: 1 }}>
+                        <Link href="/privacy" underline="none" fontSize={{ md: "14px", lg: "20px" }} fontFamily={"Barlow-Medium"} display={{ xs: "none", md: "block", lg: "block" }} color="primary" sx={{ mb: 1,'&:hover': { textDecoration: 'underline' } }}>
                             Privacy Policy
                         </Link>
                         <Typography variant="body2" display={{ xs: "none", md: "none", lg: "block" }} fontSize={"20px"} fontFamily={"Barlow-Regular"} color="#AAAAAA" mt={2}>
@@ -78,7 +78,7 @@ const Footer: React.FC = () => {
                         </Typography>
                     </Grid>
                     <Grid item xs={12} md={4} display="flex" flexDirection={{ md: "row", lg: "column" }} sx={{ display: { md: "block", lg: "none" } }} justifyContent={"space-between"} alignItems={{ xs: 'center', md: 'center' }}>
-                        <Link href="/privacy" underline="none" fontSize={{ md: "14px", lg: "20px" }} fontFamily={"Barlow-Medium"} display={{ xs: "block", md: "block", lg: "none" }} color="primary" sx={{ mb: 1 }}>
+                        <Link href="/privacy" underline="none" fontSize={{ md: "14px", lg: "20px" }} fontFamily={"Barlow-Medium"} display={{ xs: "block", md: "block", lg: "none" }} color="primary" sx={{ mb: 1,'&:hover': { textDecoration: 'underline' } }}>
                             Privacy Policy
                         </Link>
                     </Grid>

@@ -12,7 +12,7 @@ const CenteredText = ({ heading, description }) => {
                 textAlign: 'center',
                 padding: 4,
                 height: '100%',
-                minHeight: {xs:"300px",sm:"300px",md:"300px",lg:'400px',}
+                minHeight: {xs:"180px",sm:"180px",md:"280px",lg:'280px',}
             }}
         >
             <Typography fontSize={{ xs: "28px", sm: "28px", md: "40px", lg: "63px", xl: "63px" }} fontWeight={"bold"} color={"#2A2A2A"} gutterBottom>
