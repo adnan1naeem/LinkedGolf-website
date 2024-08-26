@@ -11,7 +11,7 @@ const StepCard = ({ step, description, children }: StepCardProps) => (
     <Box sx={{ textAlign: 'center', mb: 2 }}>
         <Typography
             variant="h6"
-            sx={{ fontWeight: 'bold', fontSize: { xs: "28px", sm: "28px", md: "30px", lg: "42px" }, color: '#D4D4D465' }}
+            sx={{ fontWeight: 'bold', fontSize: { xs: "28px", sm: "28px", md: "30px", lg: "42px" }, color: '#D4D4D4A6' }}
         >
             {step}
         </Typography>

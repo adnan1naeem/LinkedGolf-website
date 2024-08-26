@@ -14,8 +14,8 @@ const Card = styled(Box)(({ theme }) => ({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    borderRadius: theme.shape.borderRadius,
-    boxShadow: '0px 8px 16px rgba(0, 0, 0, 0.1)',
+    borderRadius: 8,
+    boxShadow: '5px 5px 14px #0B7DE626',
     [theme.breakpoints.down('xl')]: {
         width: 250,
     },
@@ -34,12 +34,12 @@ const HighlightCard = styled(Card)({
 });
 
 const RegularCard = styled(Card)({
-    backgroundColor: '#E7F3FF',
+    backgroundColor: '#DAECFD',
 });
 
 const StatCard: React.FC<StatCardProps> = ({ count, label, isHighlight }) => {
     return (
-        <Box component="div" sx={{ margin: '8px' }}>
+        <Box component="div" sx={{ marginTop: '8px',marginBottom:'8px' }}>
             {isHighlight ? (
                 <HighlightCard>
                     <Typography fontSize={{xs:"28px",md:"30px",lg:"40px"}} sx={{ fontWeight: 'bold',color:'#2A2A2A' }}>
@@ -48,7 +48,7 @@ const StatCard: React.FC<StatCardProps> = ({ count, label, isHighlight }) => {
                     <Typography fontSize={{xs:"20px",md:"30px",lg:"40px"}} fontFamily={"Barlow-Medium"} sx={{ color:'#2A2A2A' }} >{label}</Typography>
                 </HighlightCard>
             ) : (
-                <RegularCard>
+                <RegularCard sx={{marginLeft:'16px'}}>
                     <Typography fontSize={{xs:"28px",md:"30px",lg:"40px"}} sx={{ fontWeight: '700',color:'#2A2A2A' }}>
                         {count}
                     </Typography>
@@ -61,7 +61,7 @@ const StatCard: React.FC<StatCardProps> = ({ count, label, isHighlight }) => {
 
 const StatsSection: React.FC = () => {
     return (
-        <Box display="flex" sx={{justifyContent:'center'}}>
+        <Box display="flex" >
             <StatCard count="15,000" label="Courses" isHighlight />
             <StatCard count="100,000+" label="Golfers" />
         </Box>

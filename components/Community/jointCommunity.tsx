@@ -81,7 +81,7 @@ const JoinCommunitySection: React.FC = () => {
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                py: { xs: 10, lg: 16 },
+                py: { xs: 5, lg: 16 },
                 textAlign: { xs: 'left', lg: 'left' },
                 flexDirection: { xs: 'column', lg: 'row' },
                 height: { sm: "40vh", md: "60vh", lg: '70vh' },

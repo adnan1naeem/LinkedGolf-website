@@ -1,7 +1,7 @@
 "use client"
 import * as React from 'react';
 import { Grid, Typography, Box, Container, styled } from '@mui/material';
-import StatsSection from './StateCard';
+import DownloadButtons from './DownloadButton';
 
 interface Props {
     backgroundImage: string;
@@ -10,10 +10,10 @@ interface Props {
     image: string;
     bottomImage?: string;
     backgroundcolor: string;
-    courses: string;
+    descriptionstyle:boolean;
 }
 
-const CenteredComponent3: React.FC<Props> = ({  title, description, image, bottomImage, backgroundcolor, courses }) => {
+const CenteredComponent3: React.FC<Props> = ({  title, description, image, backgroundcolor,descriptionstyle }) => {
     const formattedDescription = description.split('\n').map((line, index) => (
         <Typography fontSize={{ xs: "18px", md: "18px", lg: "18px" }}textAlign={"left"} lineHeight={{ lg: "26px" }} component="p" fontFamily={"Barlow-Medium"} color={"#2A2A2A"} mb={{ xs: 0, lg: 2 }}>
         {line}
@@ -26,20 +26,20 @@ const CenteredComponent3: React.FC<Props> = ({  title, description, image, botto
         zIndex: 1,
     
         [theme.breakpoints.up('xs')]: {
-            objectFit: 'none',
+            objectFit: 'contain',
             height: '450px',
         },
         [theme.breakpoints.up('sm')]: {
-            objectFit: 'none',
+            objectFit: 'contain',
             height: '450px',
         },
         [theme.breakpoints.up('md')]: {
-            objectFit: 'none',
+            objectFit: 'contain',
             height: '450px',
         },
         [theme.breakpoints.up('lg')]: {
-            objectFit: 'none',
-            height: '440px',
+            objectFit: 'contain',
+            height: '500px',
         },
         [theme.breakpoints.up('xl')]: {
             height: '500px',
@@ -79,23 +79,21 @@ const CenteredComponent3: React.FC<Props> = ({  title, description, image, botto
                 <Grid
                     container
                     spacing={4}
-                    alignItems="center"
-                    justifyContent="center"
                     sx={{
                         flexDirection: { xs: 'column-reverse', lg: 'row' },
                     }}
                 >
                     <Grid item xs={16} lg={6}>
-                        <Box position="relative" display="flex" justifyContent="center" marginLeft={{ lg: "50px" }}>
+                        <Box position="relative" display="flex" justifyContent="center" >
                             <StyledImage src={image} alt="Golf Buddies" />
                         </Box>
                     </Grid>
                     <Grid item xs={12} lg={6}>
-                        <Typography fontSize={{ xs: "20px", md: "35px", lg: "40px" }} lineHeight={{xs:"28px",md:"35px",lg:"48px"}}textAlign={"left"} fontWeight="bold" color={"#2A2A2A"} sx={{ marginBottom: { xs: 4, lg: 6 } }} >
+                        <Typography fontSize={{ xs: "20px", md: "35px", lg: "40px" }} marginTop={{lg:descriptionstyle?7:9}} lineHeight={{xs:"28px",md:"35px",lg:"48px"}} textAlign={"left"} fontWeight="bold" color={"#2A2A2A"} sx={{ marginBottom: { xs: 2, lg: descriptionstyle?2:6 } }} >
                             {title}
                         </Typography>
                        <Box>{formattedDescription}</Box>
-                        {courses&& <StatsSection/>}
+                      <DownloadButtons />
                     </Grid>
                 </Grid>
             </Container>

@@ -13,7 +13,7 @@ import CenterComponentBottom from "../../components/CenteredComponentBottom";
 import CenteredComponent3 from "../../components/CenteredComponent3";
 const index = () => {
     return (
-        <div style={{ background: "transparent", flex: 1,}}>
+        <div style={{ background: "transparent", flex: 1, }}>
             <div style={{ flex: 1, background: 'linear-gradient(180deg, #EFFFE7 5%, #E7F2FF 100%)' }}>
                 <Header />
                 <MainBanner
@@ -35,12 +35,25 @@ const index = () => {
                 image="/sidemobile.png"
             />
             <CenteredComponent3
-                courses={""}
+                descriptionstyle={true}
                 backgroundImage=""
                 backgroundcolor="#E9F3FF"
-                title="Designed to help you fill out your foreee-some."
-                description="Opps! We did it again. But, seriously that’s what this app is all about. We’re golfers ourselves. All we want to do is golf more and help other people golf more. It’s that simple."
+                title="Expand your golf network"
+                description={`Linked Golf makes it super easy to connect with people you naturally meet on the golf course when being paired up with other golfers. Users can do this by scanning a QR code. This allows people to expand their golf networks even further.\n\n \n\nThe more people in your network, the more often you can golf with a set of four because it’s easier to find people whose schedules coincide.`}
                 image="/bluesidemobile.png"
+            />
+            <CenteredComponent
+                backgroundImage="/whitebackground.png"
+                title="Chat"
+                description="Join the conversation with other golf enthusiasts! Link Golf brings you closer to the community by enabling real-time chat with fellow registered players. Share tips, plan games, discuss courses, and make new friends—all within the app. Whether you're looking for advice, friendly competition, or just someone to share your passion for the sport, our chat feature makes it easy to stay connected."
+                image="/ChatImage.png"
+            />
+            <CenterComponentBottom
+                backgroundImage=""
+                backgroundcolor="#E9F3FF"
+                title="Find new golf courses or get rewarded for being a loyal customer."
+                description="Okay, that was a bad joke but we couldn’t help ourselves. The point to be made is that building your golf network in the Linked Golf app allows you to maintain friendships over a lifetime. Think of how much golf can be played! Or think about how much golf you could be missing out on by not having the Linked Golf app. Just saying."
+                image="/MattMobile.png"
             />
             <CenteredComponent
                 backgroundImage="/greenbg.png"
@@ -48,15 +61,7 @@ const index = () => {
                 description="That’s cool, all you have to do is request to join an open outing."
                 image="/greensidemobile.png"
             />
-            <CenterComponentBottom
-                courses={""}
-                golfer={""}
-                backgroundImage=""
-                backgroundcolor="#E9F3FF"
-                title="Find new golf courses or get rewarded for being a loyal customer."
-                description="Okay, that was a bad joke but we couldn’t help ourselves. The point to be made is that building your golf network in the Linked Golf app allows you to maintain friendships over a lifetime. Think of how much golf can be played! Or think about how much golf you could be missing out on by not having the Linked Golf app. Just saying."
-                image="/MattMobile.png"
-            />
+
             <GolfCourseCTA
                 backgroundImage="/whitebackground.png"
                 image='./Mask group.png'
@@ -81,7 +86,7 @@ const index = () => {
                 androidButtonText="Download for Android"
                 imageBackground={true}
             />
-            <Footer/>
+            <Footer />
         </div>
     );
 }

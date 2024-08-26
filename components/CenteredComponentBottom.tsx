@@ -1,7 +1,7 @@
 "use client"
 import * as React from 'react';
 import { Grid, Typography, Box, Container, styled } from '@mui/material';
-import StatsSection from './StateCard';
+import DownloadButtons from './DownloadButton';
 
 interface Props {
     backgroundImage: string;
@@ -10,11 +10,9 @@ interface Props {
     image: string;
     bottomImage?: string;
     backgroundcolor: string;
-    courses: string;
-    golfer: string;
 }
 
-const CenterComponentBottom: React.FC<Props> = ({ backgroundImage, title, description, image, bottomImage, backgroundcolor, courses, golfer }) => {
+const CenterComponentBottom: React.FC<Props> = ({ backgroundImage, title, description, image, bottomImage, backgroundcolor }) => {
     const formattedDescription = description.split('\n').map((line, index) => (
         <Typography fontSize={{ xs: "18px", md: "18px", lg: "18px" }}textAlign={"left"} lineHeight={{ lg: "26px" }} component="p" fontFamily={"Barlow-Medium"} color={"#2A2A2A"} mb={{ xs: 0, lg: 2 }}>
         {line}
@@ -25,34 +23,26 @@ const CenterComponentBottom: React.FC<Props> = ({ backgroundImage, title, descri
         objectFit: 'cover',
     
         [theme.breakpoints.up('xs')]: {
-            objectFit: 'none',
+            objectFit: 'contain',
             height: '450px',
         },
         [theme.breakpoints.up('sm')]: {
-            objectFit: 'none',
+            objectFit: 'contain',
             height: '450px',
         },
         [theme.breakpoints.up('md')]: {
-            objectFit: 'none',
+            objectFit: 'contain',
             height: '350px',
         },
         [theme.breakpoints.up('lg')]: {
-            height: '420px',
-            objectFit: 'none',
+            height: '550px',
+            objectFit: 'contain',
         },
         [theme.breakpoints.up('xl')]: {
-            height: '500px',
+            height: '550px',
         },
         
     }));
-    
-
-    const BottomImage = styled('img')({
-        width: '100%',
-        maxWidth: '100%',
-        objectFit: 'contain',
-        marginTop: '-20px',
-    });
 
     return (
         <Box
@@ -86,11 +76,11 @@ const CenterComponentBottom: React.FC<Props> = ({ backgroundImage, title, descri
                         </Box>
                     </Grid>
                     <Grid item xs={12} lg={6}>
-                        <Typography fontSize={{ xs: "20px", md: "35px", lg: "40px" }} lineHeight={{xs:"28px",md:"35px",lg:"48px"}} textAlign={"left"} fontWeight="bold" color={"#2A2A2A"} sx={{ marginBottom: { xs: 4, lg: 6 } }} >
+                        <Typography fontSize={{ xs: "20px", md: "35px", lg: "40px" }} lineHeight={{xs:"28px",md:"35px",lg:"48px"}} textAlign={"left"} fontWeight="bold" color={"#2A2A2A"} sx={{ marginBottom: { xs: 2, lg: 4 } }} >
                             {title}
                         </Typography>
                        <Box>{formattedDescription}</Box>
-                        {courses&& <StatsSection/>}
+                        <DownloadButtons  />
                     </Grid>
                 </Grid>
             </Container>

@@ -13,8 +13,8 @@ const JoinCommunity: React.FC = () => {
                 backgroundImage=''
                 bottomImage="/Illustration.png"
                 backgroundcolor="#E6F0FF"
-                title="Build your golf profile. Build your network. Golf more."
-                description={`Linked Golf makes it super easy to connect with people you naturally meet on the golf course when being paired up with other golfers. Users can do this by scanning a QR code. This allows people to expand their golf networks even further.\n\nThe more people in your network, the more often you can golf with a set of four because it’s easier to find people whose schedules coincide.\nPlus it makes it fun to be able to switch up who you golf with every once in a while.`}
+                title="Golf Availability"
+                description={`Opps! We did it again. But, seriously that’s what this app is all about. We’re golfers ourselves. All we want to do is golf more and help other people golf more. It’s that simple.`}
                 image="/Matt.png"
             />
         </div>

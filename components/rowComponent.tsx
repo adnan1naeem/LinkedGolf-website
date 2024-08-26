@@ -10,7 +10,7 @@ interface SectionProps {
 const sections: SectionProps[] = [
     {
         title: 'Golf Availability',
-        description: 'Know who can golf',
+        description: 'Know who can golf.',
         iconPath: '/calendar.svg',
     },
     {
@@ -56,7 +56,7 @@ function GolfSection({ title, description, iconPath }: SectionProps) {
                             {title}
                         </Typography>
                     </Stack>
-                    <Typography fontFamily={"Barlow-Regular"} color={"#032F5B"} fontSize={"18px"} mt={1}>
+                    <Typography fontFamily={"Barlow-Regular"} color={"#032F5B"} fontSize={"18px"}>
                         {description}
                     </Typography>
                 </CardContent>
