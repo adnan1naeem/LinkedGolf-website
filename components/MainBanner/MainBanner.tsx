@@ -37,7 +37,7 @@ const MainBanner: React.FC<MainBannerProps> = ({
                 flex: 1,
                 paddingTop: { xs: imageBackground && '30px' },
                 py: imageBackground ? undefined : { xs: 8, lg: 8 },
-                textAlign: imageBackground ? 'left' : { xs: 'center', lg: 'left' },
+                textAlign: { xs: 'center', lg: 'left' },
             }}
         >
             <Container maxWidth="lg">
@@ -56,7 +56,7 @@ const MainBanner: React.FC<MainBannerProps> = ({
                         <Box
                             display="flex"
                             justifyContent={{ xs: 'center', md: 'center', lg: 'flex-start' }}
-                            alignItems={imageBackground ? "baseline" : "center"}
+                            alignItems={"center"}
                             flexDirection={{ xs: 'column', lg: 'row' }}
                             alignSelf={{ md: 'center' }}
                             gap={2}

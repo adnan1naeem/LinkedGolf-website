@@ -91,7 +91,7 @@ const Footer: React.FC = () => {
                         <Box textAlign="center" sx={{ padding: 2, borderRadius: 2 }}>
                             <img src="/iosqr.png" alt="QR Code" style={{ width: '178px', marginBottom: '8px' }} />
                             <Box display="flex" justifyContent="center" gap={1}>
-                                <img src="/iosButton.png" alt="Google Play" onClick={() => window.open('https://apps.apple.com/us/app/linked-golf/id1619093321', '_blank')} style={{ width: '120px' }} />
+                                <img src="/iosButton.png" alt="Google Play" onClick={() => window.open('https://apps.apple.com/us/app/linked-golf/id1619093321', '_blank')} style={{ width: '120px',objectFit:'cover' }} />
                             </Box>
                         </Box>
                         <Box textAlign="center" sx={{ padding: 2, borderRadius: 2 }}>
