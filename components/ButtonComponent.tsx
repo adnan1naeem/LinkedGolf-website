@@ -1,4 +1,4 @@
-// 'use client';
+'use client';
 import { Button, SxProps, Theme } from "@mui/material";
 import { ReactNode } from "react";
 import Image from "next/image";
