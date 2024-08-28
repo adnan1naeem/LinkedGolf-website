@@ -1,8 +1,8 @@
 "use client"
 import React from 'react';
-import { Box, Typography, Button, styled } from '@mui/material';
+import { Box, Typography, Button } from '@mui/material';
 import CustomButton from '../CustomButton';
-
+import { styled } from '@mui/material/styles';
 interface Props {
     backgroundImage: string;
     title: string;

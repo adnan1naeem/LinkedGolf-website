@@ -1,7 +1,7 @@
 "use client";
 import React from 'react';
 import { Typography, Box, Container } from '@mui/material';
-import { styled } from '@mui/system';
+import { styled } from '@mui/material/styles';
 interface NumberBoxProps {
     $isComma?: boolean;
 }

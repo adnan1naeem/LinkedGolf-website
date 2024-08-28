@@ -1,6 +1,6 @@
 import React from 'react';
-import { Box, Typography, styled } from '@mui/material';
-
+import { Box, Typography } from '@mui/material';
+import { styled } from '@mui/material/styles';
 interface StatCardProps {
     count: string;
     label: string;

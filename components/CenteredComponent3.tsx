@@ -1,8 +1,8 @@
 "use client"
 import * as React from 'react';
-import { Grid, Typography, Box, Container, styled } from '@mui/material';
+import { Grid, Typography, Box, Container } from '@mui/material';
 import DownloadButtons from './DownloadButton';
-
+import { styled } from '@mui/material/styles';
 interface Props {
     backgroundImage: string;
     title: string;

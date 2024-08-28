@@ -1,8 +1,8 @@
 'use client';
 import React from 'react';
-import { Box, Typography, Container, Grid, styled } from '@mui/material';
+import { Box, Typography, Container, Grid } from '@mui/material';
 import CustomButton from '../CustomButton';
-
+import { styled } from '@mui/material/styles';
 interface MainBannerProps {
     title: string;
     description: string;
@@ -53,6 +53,7 @@ const MainBanner: React.FC<MainBannerProps> = ({
                         <Typography fontSize={{ sm: "16px", md: "20px", lg: "20px" }} fontFamily="Barlow-Medium" color="#2A2A2A" mt={{lg:imageBackground?0:6}} mb={3}>
                             {description}
                         </Typography>
+                        <p style={{fontSize:20,fontFamily:"Barlow-Medium",color:'black'}}>{description}</p>
                         <Box
                             display="flex"
                             justifyContent={{ xs: 'center', md: 'center', lg: 'flex-start' }}
