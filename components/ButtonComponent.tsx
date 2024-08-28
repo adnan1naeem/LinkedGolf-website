@@ -1,8 +1,6 @@
-'use client';
+// 'use client';
 import { Button, SxProps, Theme } from "@mui/material";
 import { ReactNode } from "react";
-import Apple from './../public/apple.svg';
-import Android from './../public/android-logo.svg';
 import Image from "next/image";
 
 interface ButtonComponentProps {
