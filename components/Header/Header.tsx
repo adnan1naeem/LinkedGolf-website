@@ -4,17 +4,6 @@ import Image from 'next/image';
 import { Link, Box, IconButton } from '@mui/material';
 
 const Header = () => {
-    const [isMdUp, setIsMdUp] = useState<boolean>(false);
-
-    useEffect(() => {
-        const handleResize = () => {
-            setIsMdUp(window.innerWidth >= 900);
-        };
-
-        handleResize();
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
 
     const socialMediaIcons = [
         { href: 'https://www.facebook.com/LinkedGolfApp', src: '/facebook.svg', alt: 'Facebook', color: '#1877F2' },
@@ -38,18 +27,15 @@ const Header = () => {
                     marginLeft: '10%',
                     marginRight: '10%',
                     borderRadius: 50,
-                    height:{sm:'40px',md:"70px",lg:"70px"},
-                    padding: {xs:1,sm:1,md:1,ld:2},
-                    mt: 2,
+                    padding: {xs:1,sm:1,md:2,ld:2},
                 }}
             >
-                {isMdUp ? (
                     <Box
                         component="nav"
                         sx={{
                             display: 'flex',
                             alignItems: 'center',
-                            justifyContent: 'space-between',
+                            justifyContent: {xs:'center',sm:"center",md:"space-between",lg:'space-between'},
                             paddingLeft: '2%',
                             paddingRight: '2%',
                         }}
@@ -62,7 +48,7 @@ const Header = () => {
                                 alt="header-logo"
                             />
                         </Link>
-                        <Box sx={{ display: 'flex', gap: 2, mt: 1 }}>
+                        <Box sx={{ display: {xs:"none",sm:"none",md:'flex',lg:'flex'}, gap: 2, }}>
                             {socialMediaIcons.map((icon, index) => (
                                 <IconButton
                                     key={index}
@@ -75,42 +61,18 @@ const Header = () => {
                                         justifyContent: 'center',
                                         alignItems: 'center',
                                         borderRadius: '50%',
-                                        // '&:hover': { opacity: 0.75 },
+                                        '&:hover': { opacity: 0.75 },
                                     }}
                                 >
-                                    <Image
+                                    <img
                                         src={icon.src}
                                         alt={icon.alt}
-                                        width={index==0?13:33}
-                                        height={index==0?10:33}
-                                        objectFit='contain'
-                                        // style={{ width: '90%', height: '90%' }}
+                                        style={{ width: '90%', height: '90%' }}
                                     />
                                 </IconButton>
                             ))}
                         </Box>
                     </Box>
-                ) : (
-                    <Box
-                        component="nav"
-                        sx={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            paddingLeft: '2%',
-                            paddingRight: '2%',
-                        }}
-                    >
-                        <Link href="/" sx={{ flexShrink: 0 }}>
-                            <Image
-                                src="/Vector.svg"
-                                width={110}
-                                height={30}
-                                alt="header-logo"
-                            />
-                        </Link>
-                    </Box>
-                )}
             </Box>
         </Box>
     );
