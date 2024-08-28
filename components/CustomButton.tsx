@@ -1,8 +1,6 @@
 'use client';
 import { Button, SxProps, Theme } from "@mui/material";
 import { ReactNode } from "react";
-import Apple from './../public/apple.svg';
-import Android from './../public/android-logo.svg';
 import Image from "next/image";
 
 interface CustomButtonProps {
@@ -48,8 +46,8 @@ const CustomButton: React.FC<CustomButtonProps> = ({ variant, children, onClick,
     const getIcon = () => {
         if (!iconState) return null;
         return variant === 'primary'
-            ? <Image src={Apple} alt="Apple" width={24} height={24} />
-            : <Image src={Android} alt="Android" width={24} height={24} />;
+            ? <Image src={'/apple.svg'} alt="Apple" width={24} height={24} />
+            : <Image src={'android-logo.svg'} alt="Android" width={24} height={24} />;
     };
 
     return (
