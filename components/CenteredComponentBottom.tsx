@@ -20,7 +20,7 @@ const CenterComponentBottom: React.FC<Props> = ({ backgroundImage, title, descri
     ));
 
     const StyledImage = styled('img')(({ theme }) => ({
-        objectFit: 'cover',
+        objectFit: 'contain',
     
         [theme.breakpoints.up('xs')]: {
             objectFit: 'contain',

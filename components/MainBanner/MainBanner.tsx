@@ -15,7 +15,7 @@ interface MainBannerProps {
 
 const StyledImage = styled('img')({
     width: '45rem',
-    objectFit: 'cover',
+    objectFit: 'contain',
 });
 
 const MainBanner: React.FC<MainBannerProps> = ({

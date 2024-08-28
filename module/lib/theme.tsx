@@ -9,7 +9,10 @@ const theme = createTheme({
       'Roboto',
       '"Helvetica Neue"',
       'Arial',
-      'sans-serif'
+      'sans-serif',
+      'Barlow-Medium',
+      'Quicksand-Bold',
+      'Barlow-Regular',
     ].join(','),
   },
   components: {

@@ -22,19 +22,19 @@ const CenteredComponent2: React.FC<Props> = ({ backgroundImage, title, descripti
         </Typography>
     ));
     const StyledImage = styled('img')(({ theme }) => ({
-        objectFit: 'cover',
+        objectFit: 'contain',
         [theme.breakpoints.up('xs')]: {
-            objectFit: 'cover',
+            objectFit: 'contain',
             height: '450px',
              marginTop:'-30px',
         },
         [theme.breakpoints.up('sm')]: {
             marginTop:'-30px',
-            objectFit: 'cover',
+            objectFit: 'contain',
             height: '450px',
         },
         [theme.breakpoints.up('md')]: {
-            objectFit: 'cover',
+            objectFit: 'contain',
             height: '450px',
         },
         [theme.breakpoints.up('lg')]: {
