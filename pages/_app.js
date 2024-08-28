@@ -1,20 +1,26 @@
-// _app.js or _app.tsx
+import Head from "next/head";
+import "../styles/global.css";
 
-import { CssBaseline, ThemeProvider } from '@mui/material';
-import { createTheme } from '@mui/material/styles';
-import './global.scss'; // Ensure this file exists and is included
 
-const theme = createTheme({
-  // Customize your theme here
-});
-
-function MyApp({ Component, pageProps }) {
+export default function App({ Component, pageProps }) {
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
+    <div>
+      <Head>
+      <link rel="icon" href="/favicon.ico" sizes="any" />
+      </Head>
       <Component {...pageProps} />
-    </ThemeProvider>
+      <style jsx global>{`
+        html,
+        body {
+          padding: 0;
+          margin: 0;
+
+          font-family: sans-serif;
+        }
+        * {
+          box-sizing: border-box;
+        }
+      `}</style>
+    </div>
   );
 }
-
-export default MyApp;
