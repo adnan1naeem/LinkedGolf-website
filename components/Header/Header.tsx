@@ -28,7 +28,7 @@ const Header = () => {
                     marginRight: '10%',
                     borderRadius: 50,
                     height:{sm:'70px',md:"70px",lg:"70px"},
-                    // padding: {xs:1,sm:1,md:1,ld:1},
+                    padding: {xs:1,sm:1,md:2,ld:2},
                 }}
             >
                     <Box
