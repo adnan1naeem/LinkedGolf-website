@@ -69,8 +69,9 @@ const DeleteAccountSteps = ({ image1, image2, image3, image4 }: DeleteAccountSte
                             alt="Step 1 Image"
                             sx={{
                                 width: { md: "200px", lg: '210px', xl: "255px" },
+                                marginTop:2,
                                 height: 400,
-                                objectFit: 'cover',
+                                objectFit: 'contain',
                             }}
                         />
                     </StepCard>
@@ -83,8 +84,9 @@ const DeleteAccountSteps = ({ image1, image2, image3, image4 }: DeleteAccountSte
                             alt="Step 2 Image"
                             sx={{
                                 width: { md: "200px", lg: '210px', xl: "255px" },
+                                marginTop:2,
                                 height: 400,
-                                objectFit: 'cover',
+                                objectFit: 'contain',
                             }}
                         />
                     </StepCard>
@@ -97,8 +99,9 @@ const DeleteAccountSteps = ({ image1, image2, image3, image4 }: DeleteAccountSte
                             alt="Step 3 Image"
                             sx={{
                                 width: { md: "200px", lg: '210px', xl: "255px" },
+                                marginTop:2,
                                 height: 400,
-                                objectFit: 'cover',
+                                objectFit: 'contain',
                             }}
                         />
                     </StepCard>
@@ -111,8 +114,9 @@ const DeleteAccountSteps = ({ image1, image2, image3, image4 }: DeleteAccountSte
                             alt="Step 4 Image"
                             sx={{
                                 width: { md: "200px", lg: '210px', xl: "255px" },
+                                marginTop:2,
                                 height: 400,
-                                objectFit: 'cover',
+                                objectFit: 'contain',
                             }}
                         />
                     </StepCard>

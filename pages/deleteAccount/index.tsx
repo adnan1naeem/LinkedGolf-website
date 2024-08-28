@@ -16,10 +16,10 @@ const index = () => {
                 />
             </div>
             <DeleteAccountSteps 
-            image1={"/Image1.png"}
-            image2={"/Image2.png"}
-            image3={"/Image3.png"}
-            image4={"/Image4.png"}
+            image1={"/Image1.webp"}
+            image2={"/Image2.webp"}
+            image3={"/Image3.webp"}
+            image4={"/Image4.webp"}
             />
             <Footer />
         </div>
