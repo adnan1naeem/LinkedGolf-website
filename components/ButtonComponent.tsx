@@ -48,8 +48,8 @@ const ButtonComponent: React.FC<ButtonComponentProps> = ({ variant, children, on
     const getIcon = () => {
         if (!iconState) return null;
         return variant === 'primary'
-            ? <Image src={Apple} alt="Apple" width={24} height={24} />
-            : <Image src={Android} alt="Android" width={24} height={24} />;
+            ? <Image src={'/apple.svg'} alt="Apple" width={24} height={24} />
+            : <Image src={'/android-logo.svg'} alt="Android" width={24} height={24} />;
     };
 
     return (
