@@ -63,20 +63,14 @@ body {
   }
 }
 @font-face {
-  src: local("Barlow-Medium"),
-    url("../public/fonts/Barlow-Medium.ttf") format("truetype");
-    font-family: "Barlow-Medium";
-
+  font-family: "Barlow-Medium";
+  src: url("/fonts/Barlow-Medium.ttf") format("truetype");
 }
 @font-face {
-  src: local("Barlow-Regular"),
-    url("../public/fonts/Barlow-Regular.ttf") format("truetype");
-    font-family: "Barlow-Regular";
-
+  font-family: "Barlow-Regular";
+  src: url("/fonts/Barlow-Regular.ttf") format("truetype");
 }
 @font-face {
-  src: local("Quicksand-Bold"),
-    url("../public/fonts/Quicksand-Bold.ttf") format("truetype");
-    font-family: "Quicksand-Bold";
-
+  font-family: "Quicksand-Bold";
+  src: url("/fonts/Quicksand-Bold.ttf") format("truetype");
 }

@@ -75,13 +75,16 @@ const Header = () => {
                                         justifyContent: 'center',
                                         alignItems: 'center',
                                         borderRadius: '50%',
-                                        '&:hover': { opacity: 0.75 },
+                                        // '&:hover': { opacity: 0.75 },
                                     }}
                                 >
-                                    <img
+                                    <Image
                                         src={icon.src}
                                         alt={icon.alt}
-                                        style={{ width: '90%', height: '90%' }}
+                                        width={index==0?13:33}
+                                        height={index==0?10:33}
+                                        objectFit='contain'
+                                        // style={{ width: '90%', height: '90%' }}
                                     />
                                 </IconButton>
                             ))}
