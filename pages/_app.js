@@ -1,26 +1,14 @@
-import Head from "next/head";
-import "../styles/global.css";
+import { ThemeProvider } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
+import theme from './../module/lib/theme'; // Adjust the import path
 
-
-export default function App({ Component, pageProps }) {
+function MyApp({ Component, pageProps }) {
   return (
-    <div>
-      <Head>
-      <link rel="icon" href="/favicon.ico" sizes="any" />
-      </Head>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
       <Component {...pageProps} />
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-
-          font-family: sans-serif;
-        }
-        * {
-          box-sizing: border-box;
-        }
-      `}</style>
-    </div>
+    </ThemeProvider>
   );
 }
+
+export default MyApp;
