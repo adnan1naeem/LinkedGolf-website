@@ -14,6 +14,9 @@ body {
     Fira Sans,
     Droid Sans,
     Helvetica Neue,
+    Barlow-Medium,
+    Quicksand-Bold,
+    Barlow-Regular,
     sans-serif;
 }
 
@@ -64,19 +67,19 @@ body {
 }
 @font-face {
   src: local("Barlow-Medium"),
-    url("/fonts/Barlow-Medium.ttf") format("truetype");
+    url("/Barlow-Medium.ttf") format("truetype");
     font-family: "Barlow-Medium";
 
 }
 @font-face {
   src: local("Barlow-Regular"),
-    url("/fonts/Barlow-Regular.ttf") format("truetype");
+    url("/Barlow-Regular.ttf") format("truetype");
     font-family: "Barlow-Regular";
 
 }
 @font-face {
   src: local("Quicksand-Bold"),
-    url("/fonts/Quicksand-Bold.ttf") format("truetype");
+    url("/Quicksand-Bold.ttf") format("truetype");
     font-family: "Quicksand-Bold";
 
 }
