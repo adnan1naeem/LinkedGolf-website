@@ -64,19 +64,19 @@ body {
 }
 @font-face {
   src: local("Barlow-Medium"),
-    url("../fonts/Barlow-Medium.ttf") format("truetype");
+    url("/fonts/Barlow-Medium.ttf") format("truetype");
     font-family: "Barlow-Medium";
 
 }
 @font-face {
   src: local("Barlow-Regular"),
-    url("../fonts/Barlow-Regular.ttf") format("truetype");
+    url("/fonts/Barlow-Regular.ttf") format("truetype");
     font-family: "Barlow-Regular";
 
 }
 @font-face {
   src: local("Quicksand-Bold"),
-    url("../fonts/Quicksand-Bold.ttf") format("truetype");
+    url("/fonts/Quicksand-Bold.ttf") format("truetype");
     font-family: "Quicksand-Bold";
 
 }
