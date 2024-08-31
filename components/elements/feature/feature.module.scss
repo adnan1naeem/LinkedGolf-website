@@ -1,0 +1,96 @@
+@import "../../../styles/helpers.scss";
+
+.featureCard__Wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 16px;
+
+  @include largeDisplayScreen {
+    column-gap: 12px;
+  }
+
+  @include miniTabletScreen {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 10px;
+  }
+
+  .imageBox {
+    max-width: 82px;
+    width: 100%;
+
+    @include largeDisplayScreen {
+      max-width: 72px;
+    }
+
+    @include tabletScreen {
+      max-width: 65px;
+    }
+
+    @include mobileScreen {
+      max-width: 60px;
+    }
+
+    @include smallMobileScreen {
+      margin: 0 auto;
+    }
+  }
+
+  .contentBox {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+
+    @include largeDisplayScreen {
+      row-gap: 12px;
+    }
+
+    .name {
+      @include PrimaryFont;
+      font-size: 24px;
+      color: $white-100;
+
+      @include largeDisplayScreen {
+        font-size: 22px;
+      }
+
+      @include miniLaptopScreen {
+        font-size: 20px;
+      }
+
+      @include tabletScreen {
+        font-size: 18px;
+      }
+
+      @include mobileScreen {
+        font-size: 17px;
+      }
+    }
+
+    .text {
+      @include SecondaryFont;
+      color: $white-100;
+      letter-spacing: 0.15px;
+      font-size: 18px;
+      line-height: 145%;
+
+      @include largeDisplayScreen {
+        font-size: 16px;
+      }
+
+      @include miniLaptopScreen {
+        font-size: 16px;
+        opacity: 0.8;
+      }
+
+      @include tabletScreen {
+        font-size: 14px;
+      }
+
+      @include mobileScreen {
+        font-size: 12px;
+      }
+    }
+  }
+}

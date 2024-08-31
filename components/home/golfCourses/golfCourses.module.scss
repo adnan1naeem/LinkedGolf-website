@@ -1,0 +1,243 @@
+@import "../../../styles/helpers.scss";
+
+.golfCoursesSection__Wrapper {
+  background: $darkBlue;
+
+  @include miniTabletScreen {
+    position: relative;
+  }
+
+  .golfCoursesSection__Container {
+    @include maxWidth;
+    padding-top: 90px;
+    padding-bottom: 220px;
+
+    @include miniTabletScreen {
+      padding-bottom: 100px;
+      padding-top: 100px;
+    }
+
+    .dFlex {
+      display: flex;
+      align-items: center;
+      column-gap: 95px;
+
+      @include laptopScreen {
+        justify-content: space-around;
+      }
+
+      @include miniLaptopScreen {
+        column-gap: 60px;
+      }
+
+      @include tabletScreen {
+        column-gap: 35px;
+      }
+
+      .imageBox {
+        max-width: 670px;
+        width: 100%;
+
+        @include laptopScreen {
+          max-width: 500px;
+        }
+
+        @include tabletScreen {
+          max-width: 380px;
+        }
+
+        @include miniTabletScreen {
+          position: absolute;
+          top: 50%;
+          left: -105px;
+          transform: translateY(-50%);
+          max-width: 300px;
+        }
+
+        @include mobileScreen {
+          display: none;
+        }
+      }
+
+      .contentBox {
+        max-width: 680px;
+
+        @include largeDisplayScreen {
+          max-width: 590px;
+        }
+
+        @include laptopScreen {
+          max-width: 480px;
+        }
+
+        @include miniLaptopScreen {
+          max-width: 428px;
+        }
+
+        @include tabletScreen {
+          max-width: 310px;
+        }
+
+        @include miniTabletScreen {
+          margin-left: auto;
+          max-width: 288px;
+        }
+
+        @include mobileScreen {
+          margin-right: auto;
+          margin-left: 0;
+          max-width: 350px;
+        }
+
+        .headingtext {
+          @include PrimaryFont;
+          color: $white-100;
+          font-weight: 900;
+          font-size: 54px;
+          line-height: 73px;
+
+          @include largeDisplayScreen {
+            font-size: 46px;
+            line-height: 62px;
+          }
+
+          @include laptopScreen {
+            font-size: 38px;
+            line-height: 54px;
+          }
+
+          @include miniLaptopScreen {
+            font-size: 36px;
+            line-height: 54px;
+          }
+
+          @include tabletScreen {
+            font-size: 28px;
+            line-height: 40px;
+          }
+
+          @include miniTabletScreen {
+            font-size: 26px;
+            line-height: 36px;
+          }
+
+          @include mobileScreen {
+            font-size: 28px;
+          }
+        }
+
+        .descriptionText {
+          @include SecondaryFont;
+          color: #f9fcff;
+          font-weight: 400;
+          font-size: 28px;
+          line-height: 40px;
+          margin-top: 30px;
+
+          @include largeDisplayScreen {
+            font-size: 22px;
+            line-height: 40px;
+          }
+
+          @include laptopScreen {
+            font-size: 20px;
+            line-height: 34px;
+          }
+
+          @include miniLaptopScreen {
+            font-size: 16px;
+            line-height: 28px;
+          }
+
+          @include tabletScreen {
+            font-size: 16px;
+            line-height: 28px;
+            margin-top: 22px;
+          }
+
+          @include miniTabletScreen {
+            font-size: 16px;
+            line-height: 28px;
+            margin-top: 22px;
+            opacity: 0.9;
+            // text-align: justify;
+          }
+
+          @include mobileScreen {
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+}
+
+.golfCourse__ProfileRibbon {
+  background: $lightBlue;
+  height: 206px;
+
+  @include laptopScreen {
+    height: 150px;
+  }
+
+  @include miniLaptopScreen {
+    height: 130px;
+  }
+
+  @include miniTabletScreen {
+    height: 185px;
+  }
+
+  .container {
+    @include maxWidth;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include miniTabletScreen {
+      flex-direction: column;
+      row-gap: 14px;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .contentText {
+      @include SecondaryFont;
+      color: $white-100;
+      font-size: 30px;
+      line-height: 45px;
+      max-width: 820px;
+
+      @include largeDisplayScreen {
+        font-size: 26px;
+        max-width: 700px;
+      }
+
+      @include laptopScreen {
+        font-size: 22px;
+        max-width: 565px;
+        line-height: 40px;
+      }
+
+      @include miniLaptopScreen {
+        font-size: 18px;
+        max-width: 465px;
+        line-height: 32px;
+      }
+
+      @include tabletScreen {
+        font-size: 16px;
+        max-width: 395px;
+        line-height: 28px;
+      }
+
+      @include mobileScreen {
+        max-width: 285px;
+      }
+    }
+
+    .buttonBox {
+    }
+  }
+}

@@ -1,0 +1,123 @@
+@import "../../../styles/helpers.scss";
+
+.header__wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  .header__container {
+    @include maxWidth;
+    padding-top: 70px;
+    display: flex;
+    justify-content: space-between;
+
+    @include laptopScreen {
+      padding-top: 45px;
+    }
+
+    @include miniLaptopScreen {
+      padding-top: 40px;
+    }
+
+    @include miniTabletScreen {
+      padding-top: 25px;
+      flex-direction: column;
+    }
+
+    .logoBox {
+      max-width: 260px;
+      width: 100%;
+
+      @include largeDisplayScreen {
+        max-width: 230px;
+      }
+
+      @include laptopScreen {
+        max-width: 200px;
+      }
+
+      @include miniLaptopScreen {
+        max-width: 180px;
+      }
+
+      @include miniTabletScreen {
+        max-width: 160px;
+      }
+    }
+
+    .rightCol {
+      @include miniTabletScreen {
+        margin-top: 15px;
+      }
+
+      .socialMediaPlatforms {
+        display: flex;
+        justify-content: flex-end;
+        column-gap: 8px;
+
+        @include miniTabletScreen {
+          justify-content: flex-start;
+        }
+
+        .socialMediaPlatform__Image {
+          width: 48px;
+          height: 48px;
+          background: $white-100;
+          border-radius: 12px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          @include laptopScreen {
+            width: 40px;
+            height: 40px;
+
+            img {
+              width: 75% !important;
+            }
+          }
+
+          @include miniLaptopScreen {
+            width: 38px;
+            height: 38px;
+
+            img {
+              width: 70% !important;
+            }
+          }
+
+          @include miniTabletScreen {
+            width: 35px;
+            height: 35px;
+
+            img {
+              width: 65% !important;
+            }
+          }
+        }
+      }
+
+      .txt {
+        @include SecondaryFont;
+        color: $white-100;
+        font-size: 16px;
+        opacity: 0.7;
+        margin-top: 12px;
+        letter-spacing: 0.03em;
+
+        @include laptopScreen {
+          font-size: 14px;
+        }
+
+        @include miniTabletScreen {
+          margin-top: 10px;
+        }
+
+        .highlightedText {
+          font-family: "Pacifico", cursive;
+        }
+      }
+    }
+  }
+}

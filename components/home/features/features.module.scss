@@ -1,0 +1,229 @@
+@import "../../../styles/helpers.scss";
+
+.featuresSection__wrapper {
+  background: $white-100;
+
+  .featuresSection__container {
+    @include maxWidth;
+    position: relative;
+
+    @include miniTabletScreen {
+      width: 100%;
+    }
+
+    .dottedIllustration {
+      max-width: 745px;
+      width: 100%;
+      position: absolute;
+      bottom: 25px;
+      left: 65px;
+
+      @include laptopScreen {
+        top: -60px;
+        right: 75px;
+        max-width: 550px;
+      }
+
+      @include miniTabletScreen {
+        display: none;
+      }
+    }
+
+    .featureSecPosition {
+      position: relative;
+
+      @include miniTabletScreen {
+        overflow: hidden;
+      }
+
+      .dottedIllustration__first {
+        position: absolute;
+        bottom: -50px;
+        right: 120px;
+        max-width: 690px;
+        width: 100%;
+
+        @include laptopScreen {
+          max-width: 450px;
+        }
+      }
+
+      .dottedIllustration__second {
+        position: absolute;
+        top: -300px;
+        left: -125px;
+        max-width: 690px;
+        width: 100%;
+
+        @include laptopScreen {
+          max-width: 450px;
+          top: -200px;
+        }
+      }
+
+      .dottedIllustration__third {
+        position: absolute;
+        bottom: 25px;
+        left: 65px;
+        max-width: 690px;
+        width: 100%;
+
+        @include laptopScreen {
+          max-width: 450px;
+          left: 30px;
+        }
+      }
+    }
+
+    .eachHorizontalFeature__Wrapper {
+      background: $green;
+      border-radius: 48px 0px 0px 0px;
+      position: relative;
+
+      @include miniTabletScreen {
+        overflow: hidden;
+      }
+
+      @include miniTabletScreen {
+        border-radius: 0;
+      }
+
+      .contentCol {
+        padding: 135px 0 325px 115px;
+
+        @include laptopScreen {
+          padding: 105px 0 225px 80px;
+        }
+
+        @include miniLaptopScreen {
+          padding: 80px 0 150px 80px;
+        }
+
+        @include tabletScreen {
+          padding: 0px 0 80px 0px;
+          display: flex;
+          flex-direction: column-reverse;
+          justify-content: center;
+          align-items: center;
+        }
+
+        @include miniTabletScreen {
+          padding-top: 120px;
+          padding-bottom: 160px;
+        }
+
+        .contentBox {
+          max-width: 442px;
+
+          @include laptopScreen {
+            max-width: 385px;
+          }
+
+          @include miniLaptopScreen {
+            max-width: 275px;
+          }
+
+          @include tabletScreen {
+            margin: 0 auto;
+            text-align: center;
+            margin-top: -30px;
+          }
+
+          @include miniTabletScreen {
+            text-align: left;
+            margin-left: 4.2vw;
+            margin-top: 0;
+          }
+
+          @include mobileScreen {
+            max-width: 235px;
+          }
+
+          .featureName {
+            @include PrimaryFont;
+            color: $darkBlue;
+            font-style: normal;
+            font-weight: 900;
+            font-size: 48px;
+            line-height: 54px;
+
+            @include laptopScreen {
+              font-size: 41px;
+              line-height: 50px;
+            }
+
+            @include miniLaptopScreen {
+              font-size: 30px;
+              line-height: 38px;
+            }
+
+            @include mobileScreen {
+              font-size: 28px;
+              line-height: 36px;
+            }
+          }
+
+          .featureDescription {
+            @include SecondaryFont;
+            color: $darkBlue;
+            font-weight: 400;
+            font-size: 26px;
+            line-height: 37px;
+            opacity: 0.8;
+            margin-top: 27px;
+
+            @include laptopScreen {
+              font-size: 22px;
+              line-height: 30px;
+            }
+
+            @include miniLaptopScreen {
+              font-size: 16px;
+              line-height: 25px;
+              margin-top: 17px;
+            }
+          }
+        }
+
+        .imageBox {
+          max-width: 44vw;
+          width: 100%;
+          position: absolute;
+          top: -165px;
+          right: 80px;
+          z-index: 10;
+
+          @include laptopScreen {
+            top: -112px;
+            right: 70px;
+            max-width: 42vw;
+          }
+
+          @include miniLaptopScreen {
+            top: -91px;
+            right: 50px;
+          }
+
+          @include tabletScreen {
+            position: relative;
+            top: 0;
+            right: 0;
+            transform: translateY(-19%);
+            max-width: 330px;
+          }
+
+          @include miniTabletScreen {
+            right: 0;
+            transform: translateY(-50%) translateX(100px);
+            top: 50%;
+            position: absolute;
+          }
+
+          @include mobileScreen {
+            transform: translateY(-50%) translateX(190px);
+          }
+        }
+      }
+    }
+  }
+}
