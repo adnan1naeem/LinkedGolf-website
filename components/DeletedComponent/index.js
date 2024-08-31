@@ -1,8 +1,10 @@
 import React from 'react';
 import { Box, Typography, Grid, Paper } from '@mui/material';
-import Image1 from './../../assets/images/Image1.webp'
 import Image from 'next/image';
-
+import Image1 from './../../assets/images/features/golfCourses.png'
+import Image2 from './../../assets/images/features/golfCourses.png'
+import Image3 from './../../assets/images/features/golfCourses.png'
+import Image4 from './../../assets/images/features/golfCourses.png'
 const StepCard = ({ step, description, children }) => (
     <Box sx={{ textAlign: 'center', mb: 2 }}>
         <Typography
@@ -41,7 +43,7 @@ const StepCard = ({ step, description, children }) => (
 );
 
 
-const DeleteAccountSteps = ({ image1, image2, image3, image4 }) => {
+const DeleteAccountSteps = () => {
 
     return (
         <Box
@@ -56,7 +58,7 @@ const DeleteAccountSteps = ({ image1, image2, image3, image4 }) => {
                     <StepCard step="Step 1" description="Click on settings">
                         <Image
                             component="img"
-                            src={image1}
+                            src={Image1}
                             alt="Step 1 Image"
                             sx={{
                                 width: { md: "200px", lg: '210px', xl: "255px" },
@@ -72,7 +74,7 @@ const DeleteAccountSteps = ({ image1, image2, image3, image4 }) => {
                     <StepCard step="Step 2" description="Click on leave feedback">
                         <Image
                             component="img"
-                            src={image2}
+                            src={Image2}
                             alt="Step 2 Image"
                             sx={{
                                 width: { md: "200px", lg: '210px', xl: "255px" },
@@ -87,7 +89,7 @@ const DeleteAccountSteps = ({ image1, image2, image3, image4 }) => {
                     <StepCard step="Step 3" description="Click on delete account">
                         <Image
                             component="img"
-                            src={image3}
+                            src={Image3}
                             alt="Step 3 Image"
                             sx={{
                                 width: { md: "200px", lg: '210px', xl: "255px" },
@@ -102,7 +104,7 @@ const DeleteAccountSteps = ({ image1, image2, image3, image4 }) => {
                     <StepCard step="Step 4" description="Click on delete option">
                         <Image
                             component="img"
-                            src={image4}
+                            src={Image4}
                             alt="Step 4 Image"
                             sx={{
                                 width: { md: "200px", lg: '210px', xl: "255px" },
