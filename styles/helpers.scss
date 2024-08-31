@@ -1,0 +1,80 @@
+// Font families CDN Links
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+/* font-family: 'Pacifico', cursive; */
+
+// colors
+$black-100: #000;
+
+$white-100: #ffffff;
+$white-09: #f9fcff;
+
+$green: #8bff57;
+$darkBlue: #032f5b;
+$lightBlue: #0b7de6;
+$skyBlue: #f1f8ff;
+
+// media queries
+@mixin largeDisplayScreen {
+  @media only screen and (max-width: "1600px") {
+    @content;
+  }
+}
+
+@mixin laptopScreen {
+  @media only screen and (max-width: "1440px") {
+    @content;
+  }
+}
+
+@mixin miniLaptopScreen {
+  @media only screen and (max-width: "1140px") {
+    @content;
+  }
+}
+
+@mixin tabletScreen {
+  @media only screen and (max-width: "960px") {
+    @content;
+  }
+}
+
+@mixin miniTabletScreen {
+  @media only screen and (max-width: "720px") {
+    @content;
+  }
+}
+
+@mixin mobileScreen {
+  @media only screen and (max-width: "540px") {
+    @content;
+  }
+}
+
+@mixin smallMobileScreen {
+  @media only screen and (max-width: "400px") {
+    @content;
+  }
+}
+
+// Screen width
+@mixin maxWidth {
+  max-width: 1600px;
+  width: 88%;
+  margin: 0 auto;
+
+  @include miniTabletScreen {
+    width: 90%;
+  }
+}
+
+@mixin PrimaryFont {
+  font-family: "Roboto Slab", serif;
+}
+
+@mixin SecondaryFont {
+  font-family: "Roboto", sans-serif;
+}

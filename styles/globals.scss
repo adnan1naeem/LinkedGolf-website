@@ -1,0 +1,19 @@
+@import "./common.scss";
+@import "./helpers.scss";
+@font-face {
+    font-family: "Barlow-Medium";
+    src: local("Barlow-Medium"),
+         url("/Barlow-Medium.ttf") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "Barlow-Regular";
+    src: local("Barlow-Regular"),
+         url("/Barlow-Regular.ttf") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "Quicksand-Bold";
+    src: local("Quicksand-Bold"),
+         url("/Quicksand-Bold.ttf") format("truetype");
+  }

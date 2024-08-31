@@ -47,7 +47,7 @@ const CustomButton: React.FC<CustomButtonProps> = ({ variant, children, onClick,
         if (!iconState) return null;
         return variant === 'primary'
             ? <Image src={'/apple.svg'} alt="Apple" width={24} height={24} />
-            : <Image src={'android-logo.svg'} alt="Android" width={24} height={24} />;
+            : <Image src={'/android-logo.svg'} alt="Android" width={24} height={24} />;
     };
 
     return (
