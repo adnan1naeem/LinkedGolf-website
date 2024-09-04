@@ -1,8 +1,8 @@
 'use client';
 import React from 'react';
 import { Box, Typography, Container, Grid } from '@mui/material';
-import CustomButton from '../CustomButton';
 import { styled } from '@mui/material/styles';
+import CustomLink from '../CustomButton';
 interface MainBannerProps {
     title: string;
     description: string;
@@ -31,7 +31,7 @@ const MainBanner: React.FC<MainBannerProps> = ({
         <Box
             sx={{
                 background: imageBackground
-                    ? {xs:"#FFFFFF",md:"#FFFFFF",lg:`url("/Layer2.png")`}
+                    ? { xs: "#FFFFFF", md: "#FFFFFF", lg: `url("/Layer2.png")` }
                     : 'transparent',
                 display: 'flex',
                 flex: 1,
@@ -47,10 +47,10 @@ const MainBanner: React.FC<MainBannerProps> = ({
                     direction={showImageOnLeft ? 'row-reverse' : 'row'}
                 >
                     <Grid item xs={12} lg={6}>
-                        <Typography fontSize={{ xs: "28px", md: "50px",xl: imageBackground ? "40px" : "55px" }} marginTop={{lg:9}} fontWeight="bold" color="#2A2A2A" sx={{ marginBottom: { xs: "4px", lg: "8px" } }}>
+                        <Typography fontSize={{ xs: "28px", md: "50px", xl: imageBackground ? "40px" : "55px" }} marginTop={{ lg: 9 }} fontWeight="bold" color="#2A2A2A" sx={{ marginBottom: { xs: "4px", lg: "8px" } }}>
                             {title}
                         </Typography>
-                        <Typography fontSize={{ sm: "16px", md: "20px", lg: "20px" }} fontFamily="Barlow" fontWeight={"500"} color="#2A2A2A" mt={{lg:imageBackground?0:6}} mb={3}>
+                        <Typography fontSize={{ sm: "16px", md: "20px", lg: "20px" }} fontFamily="Barlow" fontWeight={"500"} color="#2A2A2A" mt={{ lg: imageBackground ? 0 : 6 }} mb={3}>
                             {description}
                         </Typography>
                         <Box
@@ -60,24 +60,24 @@ const MainBanner: React.FC<MainBannerProps> = ({
                             flexDirection={{ xs: 'column', lg: 'row' }}
                             alignSelf={{ md: 'center' }}
                             gap={2}
-                            marginTop={{xl:8,lg:8}}
+                            marginTop={{ xl: 8, lg: 8 }}
                         >
-                            <CustomButton
-                                iconState={true}
-                                variant="primary"
-                                onClick={() => window.open('https://apps.apple.com/us/app/linked-golf/id1619093321', '_blank')}
-                                sx={{ width: { xs: '70%', sm: '80%', md: '60%', lg: 'auto' } }}
+                            <CustomLink
+                             iconState={true}
+                             variant="primary"
+                             sx={{ width: { xs: '70%', sm: '80%', md: '60%', lg: 'auto' } }}
+                                href='https://apps.apple.com/us/app/linked-golf/id1619093321'
                             >
                                 {iosButtonText}
-                            </CustomButton>
-                            <CustomButton
+                            </CustomLink>
+                            <CustomLink
                                 iconState={true}
                                 variant="secondary"
-                                onClick={() => window.open('https://play.google.com/store/apps/details?id=com.linkedgolfapp.mobile', '_blank')}
                                 sx={{ width: { xs: '70%', sm: '80%', md: '60%', lg: 'auto' } }}
+                                href='https://play.google.com/store/apps/details?id=com.linkedgolfapp.mobile'
                             >
-                                {androidButtonText}
-                            </CustomButton>
+                               {androidButtonText}
+                            </CustomLink>
                         </Box>
                     </Grid>
                     <Grid item xs={12} lg={6}>

@@ -1,8 +1,8 @@
 "use client"
 import React from 'react';
-import { Box, Typography, Button } from '@mui/material';
-import CustomButton from '../CustomButton';
+import { Box, Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
+import CustomLink from '../CustomButton';
 interface Props {
     backgroundImage: string;
     title: string;
@@ -59,16 +59,18 @@ const GolfCourseCTA: React.FC<Props> = ({ backgroundImage, title, buttonText, im
                 }
             }}>
             <LeftSide>
-                <Typography color={"#2A2A2A"} fontSize={{ sm: "16px", md: "20px", lg: "40px" }} fontFamily={{xs:"Quicksand",md:"default"}} fontWeight={"700"}  lineHeight={{ sm: "20px", md: "28px", lg: "48px" }} sx={{ textAlign: "center", paddingLeft: '10%', paddingRight: '10%' }} gutterBottom>
+                <Typography color={"#2A2A2A"} fontSize={{ sm: "16px", md: "20px", lg: "40px" }} fontFamily={{ xs: "Quicksand", md: "default" }} fontWeight={"700"} lineHeight={{ sm: "20px", md: "28px", lg: "48px" }} sx={{ textAlign: "center", paddingLeft: '10%', paddingRight: '10%' }} gutterBottom>
                     {title}
                 </Typography>
-                <CustomButton
+                <CustomLink
                     iconState={false}
                     variant="secondary"
-                    onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSdfWhy_ycy5ZP5iBnzUQPHkmMQl0VH4Xrg4cMiF5WTLTzpKZw/viewform', '_blank')}
-                    sx={{ width: { xs: '65%', sm: '40%', md: '70%', lg: 'auto' },marginTop:{xs:"15px",lg:'0px'}, border: '1px solid black', alignSelf: 'center', color: "black", fontSize: { lg: "18px", md: "16px" } }}>
-                    {buttonText}
-                </CustomButton>
+                    href='https://docs.google.com/forms/d/e/1FAIpQLSdfWhy_ycy5ZP5iBnzUQPHkmMQl0VH4Xrg4cMiF5WTLTzpKZw/viewform'
+                    
+                    sx={{ width: { xs: '69%', sm: '40%', md: '70%', lg: 'auto' }, marginTop: { xs: "15px", lg: '0px' }, border: '1px solid black', alignSelf: 'center', color: "black", fontSize: { lg: "18px", md: "16px" } }}
+                >
+                     {buttonText}
+                </CustomLink>
             </LeftSide>
             <RightSide>
                 <StyledImage src={image} alt="Decorative" />

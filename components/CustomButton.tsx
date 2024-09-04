@@ -1,30 +1,30 @@
 'use client';
-import { Button, SxProps, Theme } from "@mui/material";
+import { Link as MuiLink, SxProps, Theme } from "@mui/material";
 import { ReactNode } from "react";
 import Image from "next/image";
 
-interface CustomButtonProps {
+interface CustomLinkProps {
     variant: 'primary' | 'secondary';
     children: ReactNode;
-    onClick: () => void;
+    href: string;
     iconState: boolean;
-    sx?: SxProps<Theme>; // This should be correct
+    sx?: SxProps<Theme>;
 }
 
-const CustomButton: React.FC<CustomButtonProps> = ({ variant, children, onClick, sx = {}, iconState, ...props }) => {
-    const buttonStyles: Record<'primary' | 'secondary', SxProps<Theme>> = {
+const CustomLink: React.FC<CustomLinkProps> = ({ variant, children, href, sx = {}, iconState, ...props }) => {
+    const linkStyles: Record<'primary' | 'secondary', SxProps<Theme>> = {
         primary: {
             backgroundColor: 'primary.main',
             color: 'primary.contrastText',
             padding: '10px 20px',
             borderRadius: 100,
-            fontSize: {md:16,lg:18},
+            fontSize: { md: 16, lg: 18 },
             fontWeight: 500,
             textTransform: 'none',
-            '&:hover': {
-                backgroundColor: 'primary.main',
-                color: 'primary.contrastText',
-            },
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            textDecoration: 'none', // Remove underline from link
         },
         secondary: {
             backgroundColor: 'transparent',
@@ -33,33 +33,38 @@ const CustomButton: React.FC<CustomButtonProps> = ({ variant, children, onClick,
             border: '1px solid #0B7DE6',
             textTransform: 'none',
             borderRadius: 100,
-            fontSize: {md:16,lg:18},
+            fontSize: { md: 16, lg: 18 },
             fontWeight: 500,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            textDecoration: 'none', // Remove underline from link
         },
     };
 
     const combinedStyles = {
-        ...buttonStyles[variant],
+        ...linkStyles[variant],
         ...sx,
     } as SxProps<Theme>;
 
     const getIcon = () => {
         if (!iconState) return null;
         return variant === 'primary'
-            ? <Image src={'/apple.svg'} alt="Apple" width={24} height={24} />
-            : <Image src={'/android-logo.svg'} alt="Android" width={24} height={24} />;
+            ? <Image src={'/apple.svg'} alt="Apple" width={24} height={24} style={{ marginLeft: '10px' }} />
+            : <Image src={'/android-logo.svg'} alt="Android" width={24} height={24} style={{ marginLeft: '10px' }} />;
     };
 
     return (
-        <Button
+        <MuiLink
+            target="_blank"
+            href={href}
             sx={combinedStyles}
-            onClick={onClick}
-            endIcon={getIcon()}
             {...props}
         >
             {children}
-        </Button>
+            {getIcon()}
+        </MuiLink>
     );
 };
 
-export default CustomButton;
+export default CustomLink;

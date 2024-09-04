@@ -1,7 +1,5 @@
 import React from 'react';
 import { Box, useMediaQuery, useTheme } from '@mui/material';
-import CustomButton from './CustomButton';
-import ButtonComponent from './ButtonComponent';
 import LinkComponent from './ButtonComponent';
 
 
