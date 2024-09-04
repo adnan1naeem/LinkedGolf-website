@@ -56,7 +56,7 @@ function GolfSection({ title, description, iconPath }: SectionProps) {
                             {title}
                         </Typography>
                     </Stack>
-                    <Typography fontFamily={"Barlow-Regular"} color={"#032F5B"} fontSize={"18px"}>
+                    <Typography fontFamily={"Barlow"} fontWeight={'400'} color={"#032F5B"} fontSize={"18px"}>
                         {description}
                     </Typography>
                 </CardContent>

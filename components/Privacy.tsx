@@ -35,18 +35,18 @@ const PrivacyPolicyText: React.FC<InfoSectionProps> = ({
                         {heading}
                     </Typography>
 
-                    <Typography fontSize={{ lg: '16px' }} fontFamily={"Barlow-Medium"} sx={{ color: '#2A2A2A' }}>
+                    <Typography fontSize={{ lg: '16px' }} fontFamily={"Barlow"} fontWeight={'500'} sx={{ color: '#2A2A2A' }}>
                         {description1}
                     </Typography>
 
                     {description2 && (
-                        <Typography fontSize={{ lg: '16px' }} fontFamily={"Barlow-Medium"} sx={{ color: '#2A2A2A' }}>
+                        <Typography fontSize={{ lg: '16px' }} fontFamily={"Barlow"} fontWeight={'500'} sx={{ color: '#2A2A2A' }}>
                             {description2}
                         </Typography>
                     )}
 
                     {description3 && (
-                        <Typography fontSize={{ lg: '16px' }} fontFamily={"Barlow-Medium"} sx={{ color: '#2A2A2A' }}>
+                        <Typography fontSize={{ lg: '16px' }} fontFamily={"Barlow"} fontWeight={'500'} sx={{ color: '#2A2A2A' }}>
                             {description3}
                         </Typography>
                     )}
@@ -55,7 +55,7 @@ const PrivacyPolicyText: React.FC<InfoSectionProps> = ({
                         <Box sx={{ mt: 1 }}>
                             <List>
                                 {bulletPoints.map((point, index) => (
-                                    <ListItem key={index} sx={{ px: 0, color: "#2A2A2A", fontSize: '16px', fontFamily: 'Barlow-Medium' }}>
+                                    <ListItem key={index} sx={{ px: 0, color: "#2A2A2A", fontSize: '16px', fontFamily:"Barlow", fontWeight:500 }}>
                                         • {point}
                                     </ListItem>
                                 ))}
@@ -94,7 +94,7 @@ const PrivacyPolicyText: React.FC<InfoSectionProps> = ({
                         </Box>
                     )}
                     {endDescription && (
-                        <Typography fontSize={{ lg: '16px' }} fontFamily={"Barlow-Medium"} sx={{ color: '#2A2A2A' }}>
+                        <Typography fontSize={{ lg: '16px' }} fontFamily={"Barlow"} fontWeight={'500'} sx={{ color: '#2A2A2A' }}>
                             {endDescription}
                         </Typography>
                     )}

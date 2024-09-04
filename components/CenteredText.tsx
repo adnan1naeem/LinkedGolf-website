@@ -18,7 +18,7 @@ const CenteredText = ({ heading, description }) => {
             <Typography fontSize={{ xs: "28px", sm: "28px", md: "40px", lg: "63px", xl: "63px" }} fontWeight={"bold"} color={"#2A2A2A"} gutterBottom>
                 {heading}
             </Typography>
-            <Typography sx={{ maxWidth: { xs: '100%', sm: '90%', md: '70%', lg: '60%', xl: '45.3%' }, fontSize: { xs: '16px', md: '18px', lg: '18px' } }} fontFamily={"Barlow-Medium"} color={"#2A2A2A"} variant="body1">
+            <Typography sx={{ maxWidth: { xs: '100%', sm: '90%', md: '70%', lg: '60%', xl: '45.3%' }, fontSize: { xs: '16px', md: '18px', lg: '18px' } }} fontFamily={"Barlow"} fontWeight={'500'} color={"#2A2A2A"} variant="body1">
                 {description}
             </Typography>
         </Box>

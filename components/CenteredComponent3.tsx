@@ -15,7 +15,7 @@ interface Props {
 
 const CenteredComponent3: React.FC<Props> = ({  title, description, image, backgroundcolor,descriptionstyle }) => {
     const formattedDescription = description.split('\n').map((line, index) => (
-        <Typography fontSize={{ xs: "18px", md: "18px", lg: "18px" }}textAlign={"left"} lineHeight={{ lg: "26px" }} component="p" fontFamily={"Barlow-Medium"} color={"#2A2A2A"} mb={{ xs: 0, lg: 2 }}>
+        <Typography fontSize={{ xs: "18px", md: "18px", lg: "18px" }}textAlign={"left"} lineHeight={{ lg: "26px" }} component="p" fontFamily={"Barlow"} fontWeight={'500'} color={"#2A2A2A"} mb={{ xs: 0, lg: 2 }}>
         {line}
     </Typography>
     ));

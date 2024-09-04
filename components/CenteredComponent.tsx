@@ -57,7 +57,7 @@ const CenteredComponent: React.FC<Props> = ({ backgroundImage, title, descriptio
                     <Typography fontSize={{ xs: "20px", md: "35px", lg: "40px" }}marginTop={{lg:9}} lineHeight={{xs:"28px",md:"35px",lg:"48px"}}textAlign={"left"} fontWeight="bold" color={"#2A2A2A"} sx={{ marginBottom: { xs: 2, lg: 4 } }} >
                         {title}
                         </Typography>
-                        <Typography fontSize={{ xs: "18px", md: "18px", lg: "18px" }}textAlign={"left"} lineHeight={{ lg: "26px" }} component="p" fontFamily={"Barlow-Medium"} color={"#2A2A2A"} mb={{ xs: 1, lg: 4 }}>
+                        <Typography fontSize={{ xs: "18px", md: "18px", lg: "18px" }}textAlign={"left"} lineHeight={{ lg: "26px" }} component="p" fontFamily={"Barlow"} fontWeight={'500'} color={"#2A2A2A"} mb={{ xs: 1, lg: 4 }}>
                            {description}
                         </Typography>
                         <DownloadButtons  />
