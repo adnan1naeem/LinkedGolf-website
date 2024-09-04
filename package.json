@@ -1,25 +1,58 @@
 {
-  "name": "linked-golf",
-  "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "postinstall": "npm rebuild node-sass"
+    "dev": "next dev",
+    "start": "next start"
   },
   "dependencies": {
-    "@emotion/react": "^11.10.0",
-    "@emotion/styled": "^11.10.0",
-    "@mui/material": "^5.10.0",
-    "next": "12.2.0",
+    "@emailjs/browser": "^3.12.1",
+    "@emotion/cache": "^11.11.0",
+    "@emotion/react": "^11.11.3",
+    "@emotion/server": "^11.11.0",
+    "@emotion/styled": "^11.11.0",
+    "@fontsource/inter": "^5.0.20",
+    "@fortawesome/fontawesome-svg-core": "^6.6.0",
+    "@fortawesome/free-brands-svg-icons": "^6.6.0",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "@mui/icons-material": "^5.15.5",
+    "@mui/joy": "^5.0.0-beta.21",
+    "@mui/material": "^5.15.4",
+    "@mui/material-nextjs": "^5.15.3",
+    "@mui/styled-engine-sc": "^6.0.0-alpha.10",
+    "@mui/styles": "^5.15.13",
+    "@next/font": "^14.1.0",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.6.7",
+    "framer-motion": "^11.0.3",
+    "next": "14.0.4",
+    "next-link": "^2.0.0",
+    "nodemailer": "^6.9.9",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-icons": "^4.12.0",
+    "react-pdf": "^7.6.0",
+    "react-router-dom": "^6.21.1",
+    "react-scripts": "5.0.1",
+    "react-scroll-to-top": "^3.0.0",
+    "react-slick": "^0.29.0",
+    "reactstrap": "^9.2.1",
+    "sharp": "^0.33.5",
+    "slick-carousel": "^1.8.1",
+    "styled-components": "^6.1.6",
+    "swiper": "^10.3.1",
+    "web-vitals": "^2.1.4"
+  },
+  "engines": {
+    "node": ">=20"
   },
   "devDependencies": {
     "eslint": "8.19.0",
     "eslint-config-next": "12.2.0",
-    "sass": "^1.74.1"
+    "file-loader": "^6.2.0",
+    "sass": "^1.74.1",
+    "typescript": "5.3.3"
   }
 }

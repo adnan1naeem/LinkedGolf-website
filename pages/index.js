@@ -1,26 +1,5 @@
-import React from "react";
-
-
-import {
-  HeroSection,
-  FeaturesSection,
-  GolfCoursesSection,
-  GolfCommunitySection,
-  DownloadAppSection,
-  Footer,
-  AboutGolferCommunitySection,
-} from "../components";
+import Index from "../pages/homeScreen/index";
 
 export default function Home() {
-  return (
-    <>
-      <HeroSection />
-      <AboutGolferCommunitySection />
-      <FeaturesSection />
-      <GolfCoursesSection />
-      <GolfCommunitySection />
-      <DownloadAppSection />
-      <Footer />
-    </>
-  );
+  return <Index />;
 }

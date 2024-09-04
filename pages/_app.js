@@ -1,21 +1,26 @@
-import React from "react";
 import Head from "next/head";
-import { ThemeProvider, CssBaseline } from "@mui/material";
-import theme from "../styles/theme"; // assuming you have a custom theme
-import "../styles/globals.scss"; // Your global styles
+import "../styles/global.css";
 
-function MyApp({ Component, pageProps }) {
+
+export default function App({ Component, pageProps }) {
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
+    <div>
       <Head>
-        <title>Linked Golf | LinkedGolf is an app designed to help you build your golf network.</title>
-        <meta name="description" content="LinkedGolf is an app designed to help you build your golf network." />
-        <link rel="icon" href="/linked-golf-icon.png" />
+      <link rel="icon" href="/favicon.ico" sizes="any" />
       </Head>
       <Component {...pageProps} />
-    </ThemeProvider>
+      <style jsx global>{`
+        html,
+        body {
+          padding: 0;
+          margin: 0;
+
+          font-family: sans-serif;
+        }
+        * {
+          box-sizing: border-box;
+        }
+      `}</style>
+    </div>
   );
 }
-
-export default MyApp;
