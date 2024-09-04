@@ -1,72 +1,43 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import { Box, useMediaQuery, useTheme } from '@mui/material';
+import CustomButton from './CustomButton';
 import ButtonComponent from './ButtonComponent';
+import LinkComponent from './ButtonComponent';
 
-// Custom hook to handle media queries
-const useMediaQuery = (query: string) => {
-  const [matches, setMatches] = useState<boolean>(false);
 
-  useEffect(() => {
-    const mediaQueryList = window.matchMedia(query);
-
-    const handleChange = (event: MediaQueryListEvent) => {
-      setMatches(event.matches);
-    };
-
-    setMatches(mediaQueryList.matches);
-
-    mediaQueryList.addEventListener('change', handleChange);
-
-    return () => {
-      mediaQueryList.removeEventListener('change', handleChange);
-    };
-  }, [query]);
-
-  return matches;
-};
 
 const DownloadButtons: React.FC = () => {
-  const isSmallScreen = useMediaQuery("(max-width: 960px)");
-  const isExtraSmallScreen = useMediaQuery("(max-width: 600px)");
-  const isLargeScreen = useMediaQuery("(max-width: 1200px)");
-  const isAbove601px = useMediaQuery('(min-width: 601px)');
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down('md'));
 
-  // Combine the results to check if the width is between 601px and 1200px
-  const isInRange = isLargeScreen && isAbove601px;
-
-  const containerStyles: React.CSSProperties = {
-    display: 'flex',
-    flexDirection: isSmallScreen || isLargeScreen ? 'column' : 'row',
-    justifyContent: isSmallScreen ? 'center' : 'flex-start',
-    alignItems: 'center',
-    gap: isSmallScreen ? '8px' : '16px',
-    marginTop: isSmallScreen ? '16px' : '32px',
-  };
-
-  const buttonStyles: React.CSSProperties = {
-    flex: 1,
-    maxWidth: '100%',
-    width: isInRange ? '50%' : isExtraSmallScreen ? '78%' : isSmallScreen ? '50%' : 'auto',
-  };
-
+  const iosText = isSmallScreen ? "Download for" : "Download for iOS";
+  const androidText = isSmallScreen ? "Download for" : "Download for Android";
   return (
-    <div style={containerStyles}>
-      <ButtonComponent
+    <Box
+      display="flex"
+      justifyContent={{ xs: 'flex-start', md: 'center', lg: 'flex-start' }}
+      flexDirection={{ xs: 'row', lg: 'row' }}
+      alignSelf={{ md: 'center' }}
+      gap={2}
+      marginTop={{ xs: 4, xl: 5 }}
+    >
+      <LinkComponent
         variant="primary"
-        iconState={true}
         href='https://apps.apple.com/us/app/linked-golf/id1619093321'
-        style={buttonStyles}
+        iconState={true}
+        sx={{ width: { xs: '50%', sm: '50%', md: '60%', lg: 'auto' },height:50 }}
       >
         Download for iOS
-      </ButtonComponent>
-      <ButtonComponent
+      </LinkComponent>
+      <LinkComponent
         variant="secondary"
-        iconState={true}
         href='https://play.google.com/store/apps/details?id=com.linkedgolfapp.mobile'
-        style={buttonStyles}
+        iconState={true}
+        sx={{ width: { xs: '50%', sm: '50%', md: '60%', lg: 'auto' },height:50 }}
       >
         Download for Android
-      </ButtonComponent>
-    </div>
+      </LinkComponent>
+    </Box>
   );
 };
 

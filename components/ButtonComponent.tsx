@@ -1,60 +1,73 @@
-import React from 'react';
-import Image from 'next/image';
+'use client';
+import { Link as MuiLink, SxProps, Theme } from "@mui/material";
+import { ReactNode } from "react";
+import Image from "next/image";
 
-interface ButtonComponentProps {
+interface LinkComponentProps {
     variant: 'primary' | 'secondary';
-    children: React.ReactNode;
-    href: string; // Changed from `onClick` to `href` for navigation
+    children: ReactNode;
+    href: string;
     iconState: boolean;
-    style?: React.CSSProperties;
+    sx?: SxProps<Theme>;
 }
 
-const ButtonComponent: React.FC<ButtonComponentProps> = ({ variant, children, href, iconState, style, ...props }) => {
-    const buttonStyles: React.CSSProperties = {
-        backgroundColor: variant === 'primary' ? '#1976d2' : 'transparent',
-        color: variant === 'primary' ? '#ffffff' : '#0B7DE6',
-        border: variant === 'secondary' ? '1px solid #0B7DE6' : 'none',
-        padding: '15px 20px',
-        justifyContent: 'center',
-        borderRadius: '100px',
-        fontSize: '18px',
+const buttonStyles: Record<'primary' | 'secondary', SxProps<Theme>> = {
+    primary: {
+        backgroundColor: 'primary.main',
+        color: 'primary.contrastText',
+        padding: { sx:"5px 10px",sm: "5px 10px", md: '10px 20px', lg: '10px 20px' },
+        borderRadius: 100,
+        fontSize: {xs:12, sm: 10, md: 18, lg: 18 },
         fontWeight: 500,
         textTransform: 'none',
         display: 'flex',
-        alignItems: 'center',
-        gap: '8px',
-        cursor: 'pointer',
-        transition: 'background-color 0.3s ease',
-        textDecoration: 'none', // Ensures no underline on links
-        ...style,
-    };
+        alignItems: 'center', // Center items vertically
+        justifyContent: 'center', // Center items horizontally
+        '&:hover': {
+            backgroundColor: 'primary.main',
+            color: 'primary.contrastText',
+        },
+    },
+    secondary: {
+        backgroundColor: 'transparent',
+        color: '#0B7DE6',
+        padding: { sx:"5px 10px",sm: "5px 10px", md: '10px 20px', lg: '10px 20px' },
+        border: '1px solid #0B7DE6',
+        textTransform: 'none',
+        borderRadius: 100,
+        fontSize: {xs:12, sm: 10, md: 18, lg: 18 },
+        fontWeight: 500,
+        display: 'flex',
+        alignItems: 'center', // Center items vertically
+        justifyContent: 'center', // Center items horizontally
+    },
+};
 
-    const hoverStyles: React.CSSProperties = variant === 'primary'
-        ? { backgroundColor: '#115293' } // Darker shade for primary
-        : { backgroundColor: '#e0f2f1' }; // Light background for secondary
-
-    const combinedStyles: React.CSSProperties = {
-        ...buttonStyles,
-        // Unfortunately, inline styles do not support `:hover`, so this will be a static style
-    };
+const LinkComponent: React.FC<LinkComponentProps> = ({ variant, children, href, sx = {}, iconState, ...props }) => {
+    const combinedStyles = {
+        ...buttonStyles[variant],
+        ...sx,
+        textDecoration: 'none', // Ensure no underline on links
+    } as SxProps<Theme>;
 
     const getIcon = () => {
         if (!iconState) return null;
         return variant === 'primary'
-            ? <Image src={'/apple.svg'} alt="Apple" width={24} height={24} />
-            : <Image src={'/android-logo.svg'} alt="Android" width={24} height={24} />;
+            ? <Image src={'/apple.svg'} style={{ marginLeft: "10px" }} alt="Apple" width={24} height={24} />
+            : <Image src={'/android-logo.svg'} style={{ marginLeft: "10px" }} alt="Android" width={24} height={24} />;
     };
 
     return (
-        <a
+        <MuiLink
+            target="_blank"
             href={href}
-            style={combinedStyles}
+            sx={combinedStyles}
             {...props}
         >
             {children}
             {getIcon()}
-        </a>
+        </MuiLink>
     );
 };
 
-export default ButtonComponent;
+export default LinkComponent;
