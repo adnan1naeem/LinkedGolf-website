@@ -58,7 +58,7 @@ body {
     rgb(var(--background-start-rgb));
 }
 body {
-  background-color: red; /* Change this to your desired background color */
+  background-color: red;
 }
 @layer utilities {
   .text-balance {
