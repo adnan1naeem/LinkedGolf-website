@@ -45,7 +45,7 @@ const ButtonComponent: React.FC<ButtonComponentProps> = ({ variant, children, on
 
     return (
         <button
-            onClick={()=>{alert("111")}}
+            onClick={onClick}
             style={combinedStyles}
             {...props}
         >
