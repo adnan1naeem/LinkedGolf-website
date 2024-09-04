@@ -50,7 +50,7 @@ const MainBanner: React.FC<MainBannerProps> = ({
                         <Typography fontSize={{ xs: "28px", md: "50px",xl: imageBackground ? "40px" : "55px" }} marginTop={{lg:9}} fontWeight="bold" color="#2A2A2A" sx={{ marginBottom: { xs: "4px", lg: "8px" } }}>
                             {title}
                         </Typography>
-                        <Typography fontSize={{ sm: "16px", md: "20px", lg: "20px" }} fontFamily="Barlow-Medium" color="#2A2A2A" mt={{lg:imageBackground?0:6}} mb={3}>
+                        <Typography fontSize={{ sm: "16px", md: "20px", lg: "20px" }} fontFamily="Barlow" fontWeight={"500"} color="#2A2A2A" mt={{lg:imageBackground?0:6}} mb={3}>
                             {description}
                         </Typography>
                         <Box

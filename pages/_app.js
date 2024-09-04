@@ -1,8 +1,16 @@
 import Head from "next/head";
 import "../styles/global.css";
+import React from "react";
 
 
 export default function App({ Component, pageProps }) {
+  React.useEffect(() => {
+    const jssStyles = document.querySelector('#jss-server-side');
+    if (jssStyles) {
+      jssStyles.parentElement.removeChild(jssStyles);
+    }
+  }, []);
+  
   return (
     <div>
       <Head>
