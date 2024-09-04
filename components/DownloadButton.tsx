@@ -23,7 +23,7 @@ const DownloadButtons: React.FC = () => {
         variant="primary"
         href='https://apps.apple.com/us/app/linked-golf/id1619093321'
         iconState={true}
-        sx={{ width: { xs: '50%', sm: '50%', md: '60%', lg: 'auto' },height:50,fontWeight:500 }}
+        sx={{ width: { xs: '50%', sm: '50%', md: '60%', lg: 'auto' },height:52,fontWeight:500 }}
       >
         Download for iOS
       </LinkComponent>
@@ -31,7 +31,7 @@ const DownloadButtons: React.FC = () => {
         variant="secondary"
         href='https://play.google.com/store/apps/details?id=com.linkedgolfapp.mobile'
         iconState={true}
-        sx={{ width: { xs: '50%', sm: '50%', md: '60%', lg: 'auto' },height:50,fontWeight:500  }}
+        sx={{ width: { xs: '50%', sm: '50%', md: '60%', lg: 'auto' },height:52,fontWeight:500  }}
       >
         Download for Android
       </LinkComponent>

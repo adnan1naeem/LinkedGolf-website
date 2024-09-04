@@ -65,7 +65,7 @@ const MainBanner: React.FC<MainBannerProps> = ({
                             <CustomLink
                              iconState={true}
                              variant="primary"
-                             sx={{ width: { xs: '70%', sm: '80%', md: '60%', lg: 'auto' } }}
+                             sx={{ width: { xs: '70%', sm: '80%', md: '60%', lg: 'auto' },height:52 }}
                                 href='https://apps.apple.com/us/app/linked-golf/id1619093321'
                             >
                                 {iosButtonText}
@@ -73,7 +73,7 @@ const MainBanner: React.FC<MainBannerProps> = ({
                             <CustomLink
                                 iconState={true}
                                 variant="secondary"
-                                sx={{ width: { xs: '70%', sm: '80%', md: '60%', lg: 'auto' } }}
+                                sx={{ width: { xs: '70%', sm: '80%', md: '60%', lg: 'auto' },height:52 }}
                                 href='https://play.google.com/store/apps/details?id=com.linkedgolfapp.mobile'
                             >
                                {androidButtonText}
