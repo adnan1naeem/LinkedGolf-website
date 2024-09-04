@@ -4,18 +4,18 @@ import Image from 'next/image';
 interface ButtonComponentProps {
     variant: 'primary' | 'secondary';
     children: React.ReactNode;
-    onClick: () => void;
+    href: string; // Changed from `onClick` to `href` for navigation
     iconState: boolean;
     style?: React.CSSProperties;
 }
 
-const ButtonComponent: React.FC<ButtonComponentProps> = ({ variant, children, onClick, iconState, style, ...props }) => {
+const ButtonComponent: React.FC<ButtonComponentProps> = ({ variant, children, href, iconState, style, ...props }) => {
     const buttonStyles: React.CSSProperties = {
         backgroundColor: variant === 'primary' ? '#1976d2' : 'transparent',
         color: variant === 'primary' ? '#ffffff' : '#0B7DE6',
         border: variant === 'secondary' ? '1px solid #0B7DE6' : 'none',
         padding: '15px 20px',
-        justifyContent:'center',
+        justifyContent: 'center',
         borderRadius: '100px',
         fontSize: '18px',
         fontWeight: 500,
@@ -25,6 +25,7 @@ const ButtonComponent: React.FC<ButtonComponentProps> = ({ variant, children, on
         gap: '8px',
         cursor: 'pointer',
         transition: 'background-color 0.3s ease',
+        textDecoration: 'none', // Ensures no underline on links
         ...style,
     };
 
@@ -34,6 +35,7 @@ const ButtonComponent: React.FC<ButtonComponentProps> = ({ variant, children, on
 
     const combinedStyles: React.CSSProperties = {
         ...buttonStyles,
+        // Unfortunately, inline styles do not support `:hover`, so this will be a static style
     };
 
     const getIcon = () => {
@@ -44,14 +46,14 @@ const ButtonComponent: React.FC<ButtonComponentProps> = ({ variant, children, on
     };
 
     return (
-        <button
-            onClick={onClick}
+        <a
+            href={href}
             style={combinedStyles}
             {...props}
         >
             {children}
             {getIcon()}
-        </button>
+        </a>
     );
 };
 

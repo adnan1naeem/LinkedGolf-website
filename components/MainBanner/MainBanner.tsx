@@ -65,7 +65,7 @@ const MainBanner: React.FC<MainBannerProps> = ({
                             <CustomButton
                                 iconState={true}
                                 variant="primary"
-                                onClick={() => alert("123")}
+                                onClick={() => window.open('https://apps.apple.com/us/app/linked-golf/id1619093321', '_blank')}
                                 sx={{ width: { xs: '70%', sm: '80%', md: '60%', lg: 'auto' } }}
                             >
                                 {iosButtonText}

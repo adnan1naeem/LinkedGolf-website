@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import ButtonComponent from './ButtonComponent';
 
+// Custom hook to handle media queries
 const useMediaQuery = (query: string) => {
   const [matches, setMatches] = useState<boolean>(false);
 
@@ -26,15 +27,16 @@ const useMediaQuery = (query: string) => {
 const DownloadButtons: React.FC = () => {
   const isSmallScreen = useMediaQuery("(max-width: 960px)");
   const isExtraSmallScreen = useMediaQuery("(max-width: 600px)");
-  const islarge = useMediaQuery("(max-width: 1200px)");
+  const isLargeScreen = useMediaQuery("(max-width: 1200px)");
   const isAbove601px = useMediaQuery('(min-width: 601px)');
 
-    // Combine the results to check if the width is between 601px and 1200px
-    const isInRange = islarge && isAbove601px;
+  // Combine the results to check if the width is between 601px and 1200px
+  const isInRange = isLargeScreen && isAbove601px;
+
   const containerStyles: React.CSSProperties = {
     display: 'flex',
-    flexDirection: isSmallScreen ||islarge? 'column' : 'row',
-    justifyContent: isSmallScreen? 'center' : 'flex-start',
+    flexDirection: isSmallScreen || isLargeScreen ? 'column' : 'row',
+    justifyContent: isSmallScreen ? 'center' : 'flex-start',
     alignItems: 'center',
     gap: isSmallScreen ? '8px' : '16px',
     marginTop: isSmallScreen ? '16px' : '32px',
@@ -43,7 +45,7 @@ const DownloadButtons: React.FC = () => {
   const buttonStyles: React.CSSProperties = {
     flex: 1,
     maxWidth: '100%',
-    width: isInRange?"50%":isExtraSmallScreen ? '78%' : isSmallScreen ? '50%' : 'auto',
+    width: isInRange ? '50%' : isExtraSmallScreen ? '78%' : isSmallScreen ? '50%' : 'auto',
   };
 
   return (
@@ -51,7 +53,7 @@ const DownloadButtons: React.FC = () => {
       <ButtonComponent
         variant="primary"
         iconState={true}
-        onClick={() => window.open('https://apps.apple.com/us/app/linked-golf/id1619093321', '_blank')}
+        href='https://apps.apple.com/us/app/linked-golf/id1619093321'
         style={buttonStyles}
       >
         Download for iOS
@@ -59,7 +61,7 @@ const DownloadButtons: React.FC = () => {
       <ButtonComponent
         variant="secondary"
         iconState={true}
-        onClick={() => window.open('https://play.google.com/store/apps/details?id=com.linkedgolfapp.mobile', '_blank')}
+        href='https://play.google.com/store/apps/details?id=com.linkedgolfapp.mobile'
         style={buttonStyles}
       >
         Download for Android
