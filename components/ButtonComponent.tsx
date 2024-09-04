@@ -34,7 +34,6 @@ const ButtonComponent: React.FC<ButtonComponentProps> = ({ variant, children, on
 
     const combinedStyles: React.CSSProperties = {
         ...buttonStyles,
-        ':hover': hoverStyles,
     };
 
     const getIcon = () => {

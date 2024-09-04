@@ -26,12 +26,15 @@ const useMediaQuery = (query: string) => {
 const DownloadButtons: React.FC = () => {
   const isSmallScreen = useMediaQuery("(max-width: 960px)");
   const isExtraSmallScreen = useMediaQuery("(max-width: 600px)");
-  const iosText = isSmallScreen || isExtraSmallScreen? "Download for" : "Download for iOS";
-  const androidText = isSmallScreen || isExtraSmallScreen ? "Download for" : "Download for Android";
+  const islarge = useMediaQuery("(max-width: 1200px)");
+  const isAbove601px = useMediaQuery('(min-width: 601px)');
+
+    // Combine the results to check if the width is between 601px and 1200px
+    const isInRange = islarge && isAbove601px;
   const containerStyles: React.CSSProperties = {
     display: 'flex',
-    flexDirection: isSmallScreen ? 'column' : 'row',
-    justifyContent: isSmallScreen ? 'center' : 'flex-start',
+    flexDirection: isSmallScreen ||islarge? 'column' : 'row',
+    justifyContent: isSmallScreen? 'center' : 'flex-start',
     alignItems: 'center',
     gap: isSmallScreen ? '8px' : '16px',
     marginTop: isSmallScreen ? '16px' : '32px',
@@ -40,7 +43,7 @@ const DownloadButtons: React.FC = () => {
   const buttonStyles: React.CSSProperties = {
     flex: 1,
     maxWidth: '100%',
-    width: isExtraSmallScreen ? '80%' : isSmallScreen ? '50%' : 'auto',
+    width: isInRange?"50%":isExtraSmallScreen ? '78%' : isSmallScreen ? '50%' : 'auto',
   };
 
   return (
@@ -51,7 +54,7 @@ const DownloadButtons: React.FC = () => {
         onClick={() => window.open('https://apps.apple.com/us/app/linked-golf/id1619093321', '_blank')}
         style={buttonStyles}
       >
-        {iosText}
+        Download for iOS
       </ButtonComponent>
       <ButtonComponent
         variant="secondary"
@@ -59,7 +62,7 @@ const DownloadButtons: React.FC = () => {
         onClick={() => window.open('https://play.google.com/store/apps/details?id=com.linkedgolfapp.mobile', '_blank')}
         style={buttonStyles}
       >
-        {androidText}
+        Download for Android
       </ButtonComponent>
     </div>
   );
