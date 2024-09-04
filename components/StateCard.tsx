@@ -52,7 +52,7 @@ const StatCard: React.FC<StatCardProps> = ({ count, label, isHighlight }) => {
                     <Typography fontSize={{xs:"28px",md:"30px",lg:"40px"}} sx={{ fontWeight: '700',color:'#2A2A2A' }}>
                         {count}
                     </Typography>
-                    <Typography fontSize={{xs:"20px",md:"30px",lg:"40px"}} fontFamily={"Barlow"} fontWeight={'500'} fontWeight={"300"} sx={{color:'#2A2A2A' }} >{label}</Typography>
+                    <Typography fontSize={{xs:"20px",md:"30px",lg:"40px"}} fontFamily={"Barlow"} fontWeight={'400'} sx={{color:'#2A2A2A' }} >{label}</Typography>
                 </RegularCard>
             )}
         </Box>
