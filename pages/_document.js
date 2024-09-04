@@ -69,7 +69,7 @@ class MyDocument extends Document {
               }
 
               body {
-                background-color: white;
+                background-color: #EFFFE7;
               }
 
               @layer utilities {
