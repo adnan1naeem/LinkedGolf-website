@@ -13586,7 +13586,7 @@ __metadata:
     react-scroll-to-top: ^3.0.0
     react-slick: ^0.29.0
     reactstrap: ^9.2.1
-    sass: ^1.74.1
+    sass: ^1.78.0
     sharp: ^0.33.5
     slick-carousel: ^1.8.1
     styled-components: ^6.1.6
@@ -13681,7 +13681,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass@npm:^1.74.1":
+"sass@npm:^1.78.0":
   version: 1.78.0
   resolution: "sass@npm:1.78.0"
   dependencies:
