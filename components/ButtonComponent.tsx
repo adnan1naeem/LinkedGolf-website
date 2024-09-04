@@ -1,46 +1,41 @@
-import { Button, SxProps, Theme } from "@mui/material";
-import { ReactNode } from "react";
-import Image from "next/image";
+import React from 'react';
+import Image from 'next/image';
 
 interface ButtonComponentProps {
     variant: 'primary' | 'secondary';
-    children: ReactNode;
+    children: React.ReactNode;
     onClick: () => void;
     iconState: boolean;
-    sx?: SxProps<Theme>;
+    style?: React.CSSProperties;
 }
 
-const ButtonComponent: React.FC<ButtonComponentProps> = ({ variant, children, onClick, sx = {}, iconState, ...props }) => {
-    const buttonStyles: Record<'primary' | 'secondary', SxProps<Theme>> = {
-        primary: {
-            backgroundColor: 'primary.main',
-            color: 'primary.contrastText',
-            padding: {sm:"5px 10px",md:'10px 20px',lg:'10px 20px'},
-            borderRadius: 100,
-            fontSize: {sm:10,md:18,lg:18},
-            fontWeight: 500,
-            textTransform: 'none',
-            '&:hover': {
-                backgroundColor: 'primary.main',
-                color: 'primary.contrastText',
-            },
-        },
-        secondary: {
-            backgroundColor: 'transparent',
-            color: '#0B7DE6',
-            padding: {sm:"5px 10px",md:'10px 20px',lg:'10px 20px'},
-            border: '1px solid #0B7DE6',
-            textTransform: 'none',
-            borderRadius: 100,
-            fontSize: {sm:10,md:18,lg:18},
-            fontWeight: 500,
-        },
+const ButtonComponent: React.FC<ButtonComponentProps> = ({ variant, children, onClick, iconState, style, ...props }) => {
+    const buttonStyles: React.CSSProperties = {
+        backgroundColor: variant === 'primary' ? '#1976d2' : 'transparent',
+        color: variant === 'primary' ? '#ffffff' : '#0B7DE6',
+        border: variant === 'secondary' ? '1px solid #0B7DE6' : 'none',
+        padding: '15px 20px',
+        justifyContent:'center',
+        borderRadius: '100px',
+        fontSize: '18px',
+        fontWeight: 500,
+        textTransform: 'none',
+        display: 'flex',
+        alignItems: 'center',
+        gap: '8px',
+        cursor: 'pointer',
+        transition: 'background-color 0.3s ease',
+        ...style,
     };
 
-    const combinedStyles = {
-        ...buttonStyles[variant],
-        ...sx,
-    } as SxProps<Theme>;
+    const hoverStyles: React.CSSProperties = variant === 'primary'
+        ? { backgroundColor: '#115293' } // Darker shade for primary
+        : { backgroundColor: '#e0f2f1' }; // Light background for secondary
+
+    const combinedStyles: React.CSSProperties = {
+        ...buttonStyles,
+        ':hover': hoverStyles,
+    };
 
     const getIcon = () => {
         if (!iconState) return null;
@@ -50,14 +45,14 @@ const ButtonComponent: React.FC<ButtonComponentProps> = ({ variant, children, on
     };
 
     return (
-        <Button
-            sx={combinedStyles}
+        <button
             onClick={onClick}
-            endIcon={getIcon()}
+            style={combinedStyles}
             {...props}
         >
             {children}
-        </Button>
+            {getIcon()}
+        </button>
     );
 };
 

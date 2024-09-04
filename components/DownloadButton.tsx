@@ -1,41 +1,67 @@
-import React from 'react';
-import { Box, useMediaQuery, useTheme } from '@mui/material';
+import React, { useState, useEffect } from 'react';
 import ButtonComponent from './ButtonComponent';
 
+const useMediaQuery = (query: string) => {
+  const [matches, setMatches] = useState<boolean>(false);
 
+  useEffect(() => {
+    const mediaQueryList = window.matchMedia(query);
+
+    const handleChange = (event: MediaQueryListEvent) => {
+      setMatches(event.matches);
+    };
+
+    setMatches(mediaQueryList.matches);
+
+    mediaQueryList.addEventListener('change', handleChange);
+
+    return () => {
+      mediaQueryList.removeEventListener('change', handleChange);
+    };
+  }, [query]);
+
+  return matches;
+};
 
 const DownloadButtons: React.FC = () => {
-  const theme = useTheme();
-  const isSmallScreen = useMediaQuery(theme.breakpoints.down('md'));
+  const isSmallScreen = useMediaQuery("(max-width: 960px)");
+  const isExtraSmallScreen = useMediaQuery("(max-width: 600px)");
+  const iosText = isSmallScreen || isExtraSmallScreen? "Download for" : "Download for iOS";
+  const androidText = isSmallScreen || isExtraSmallScreen ? "Download for" : "Download for Android";
+  const containerStyles: React.CSSProperties = {
+    display: 'flex',
+    flexDirection: isSmallScreen ? 'column' : 'row',
+    justifyContent: isSmallScreen ? 'center' : 'flex-start',
+    alignItems: 'center',
+    gap: isSmallScreen ? '8px' : '16px',
+    marginTop: isSmallScreen ? '16px' : '32px',
+  };
 
-  const iosText = isSmallScreen ? "Download for" : "Download for iOS";
-  const androidText = isSmallScreen ? "Download for" : "Download for Android";
+  const buttonStyles: React.CSSProperties = {
+    flex: 1,
+    maxWidth: '100%',
+    width: isExtraSmallScreen ? '80%' : isSmallScreen ? '50%' : 'auto',
+  };
+
   return (
-    <Box
-      display="flex"
-      justifyContent={{ xs: 'flex-start', md: 'center', lg: 'flex-start' }}
-      flexDirection={{ xs: 'row', lg: 'row' }}
-      alignSelf={{ md: 'center' }}
-      gap={2}
-      marginTop={{xs:4,xl:5}}
-    >
+    <div style={containerStyles}>
       <ButtonComponent
-        iconState={true}
         variant="primary"
+        iconState={true}
         onClick={() => window.open('https://apps.apple.com/us/app/linked-golf/id1619093321', '_blank')}
-        sx={{ width: { xs: '50%', sm: '50%', md: '60%', lg: 'auto' } }}
+        style={buttonStyles}
       >
         {iosText}
       </ButtonComponent>
       <ButtonComponent
-        iconState={true}
         variant="secondary"
+        iconState={true}
         onClick={() => window.open('https://play.google.com/store/apps/details?id=com.linkedgolfapp.mobile', '_blank')}
-        sx={{ width: { xs: '50%', sm: '50%', md: '60%', lg: 'auto' } }}
+        style={buttonStyles}
       >
-         {androidText}
+        {androidText}
       </ButtonComponent>
-    </Box>
+    </div>
   );
 };
 
