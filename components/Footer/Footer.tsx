@@ -91,13 +91,17 @@ const Footer: React.FC = () => {
                         <Box textAlign="center" sx={{ padding: 2, borderRadius: 2 }}>
                             <img src="/iosqr.png" alt="QR Code" style={{ width: '178px', marginBottom: '8px' }} />
                             <Box display="flex" justifyContent="center" gap={1}>
-                                <img src="/iosButton.png" alt="Google Play" onClick={() => window.open('https://apps.apple.com/us/app/linked-golf/id1619093321', '_blank')} style={{ width: '120px',objectFit:'cover' }} />
+                                <a href="https://apps.apple.com/us/app/linked-golf/id1619093321" target="_blank" rel="noopener noreferrer">
+                                    <img src="/iosButton.png" alt="Google Play" style={{ width: '120px', objectFit: 'cover' }} />
+                                </a>
                             </Box>
                         </Box>
                         <Box textAlign="center" sx={{ padding: 2, borderRadius: 2 }}>
                             <img src="/androidqr.png" alt="QR Code" style={{ width: '178px', marginBottom: '8px' }} />
                             <Box display="flex" justifyContent="center" gap={1}>
-                                <img src="/AndroidButton.png" alt="App Store" onClick={() => window.open('https://play.google.com/store/apps/details?id=com.linkedgolfapp.mobile', '_blank')} style={{ width: '120px' }} />
+                                <a href="https://play.google.com/store/apps/details?id=com.linkedgolfapp.mobile" target="_blank" rel="noopener noreferrer">
+                                    <img src="/AndroidButton.png" alt="App Store" style={{ width: '120px' }} />
+                                </a>
                             </Box>
                         </Box>
                     </Grid>
