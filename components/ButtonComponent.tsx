@@ -21,8 +21,8 @@ const buttonStyles: Record<'primary' | 'secondary', SxProps<Theme>> = {
         fontWeight: 500,
         textTransform: 'none',
         display: 'flex',
-        alignItems: 'center', // Center items vertically
-        justifyContent: 'center', // Center items horizontally
+        alignItems: 'center',
+        justifyContent: 'center',
         '&:hover': {
             backgroundColor: 'primary.main',
             color: 'primary.contrastText',
@@ -38,8 +38,8 @@ const buttonStyles: Record<'primary' | 'secondary', SxProps<Theme>> = {
         fontSize: {xs:12, sm: 10, md: 18, lg: 18 },
         fontWeight: 500,
         display: 'flex',
-        alignItems: 'center', // Center items vertically
-        justifyContent: 'center', // Center items horizontally
+        alignItems: 'center',
+        justifyContent: 'center',
     },
 };
 
