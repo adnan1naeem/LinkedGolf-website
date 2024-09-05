@@ -49,7 +49,7 @@ const Header = () => {
                                 alt="header-logo"
                             />
                         </Link>
-                        <Box sx={{ display: {xs:"none",sm:"none",md:'flex',lg:'flex'}, gap: 2, }}>
+                        {/* <Box sx={{ display: {xs:"none",sm:"none",md:'flex',lg:'flex'}, gap: 2, }}>
                             {socialMediaIcons.map((icon, index) => (
                                 <IconButton
                                     key={index}
@@ -72,7 +72,7 @@ const Header = () => {
                                     />
                                 </IconButton>
                             ))}
-                        </Box>
+                        </Box> */}
                     </Box>
             </Box>
         </Box>
