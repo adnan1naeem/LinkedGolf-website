@@ -8,9 +8,9 @@ const Header = () => {
     const socialMediaIcons = [
         { href: 'https://www.facebook.com/LinkedGolfApp', src: '/facebook.svg', alt: 'Facebook', color: '#1877F2' },
         { href: 'https://www.instagram.com/linkedgolfapp/?hl=en', src: '/instagram.svg', alt: 'Instagram', color: '#E1306C' },
-        { href: '#', src: '/twitter.svg', alt: 'Twitter', color: '#1DA1F2' },
-        { href: '#', src: '/linkedin.svg', alt: 'LinkedIn', color: '#0A66C2' },
-        { href: '#', src: '/rabbit.svg', alt: 'Reddit', color: '#FF4500' },
+        // { href: '#', src: '/twitter.svg', alt: 'Twitter', color: '#1DA1F2' },
+        // { href: '#', src: '/linkedin.svg', alt: 'LinkedIn', color: '#0A66C2' },
+        // { href: '#', src: '/rabbit.svg', alt: 'Reddit', color: '#FF4500' },
     ];
 
     return (
@@ -49,7 +49,7 @@ const Header = () => {
                                 alt="header-logo"
                             />
                         </Link>
-                        {/* <Box sx={{ display: {xs:"none",sm:"none",md:'flex',lg:'flex'}, gap: 2, }}>
+                        <Box sx={{ display: {xs:"none",sm:"none",md:'flex',lg:'flex'}, gap: 2, }}>
                             {socialMediaIcons.map((icon, index) => (
                                 <IconButton
                                     key={index}
@@ -72,7 +72,7 @@ const Header = () => {
                                     />
                                 </IconButton>
                             ))}
-                        </Box> */}
+                        </Box>
                     </Box>
             </Box>
         </Box>

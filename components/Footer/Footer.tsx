@@ -6,9 +6,9 @@ const Footer: React.FC = () => {
     const socialMediaIcons = [
         { href: 'https://www.facebook.com/LinkedGolfApp', src: '/facebook.svg', alt: 'Facebook', color: '#1877F2' },
         { href: 'https://www.instagram.com/linkedgolfapp/?hl=en', src: '/instagram.svg', alt: 'Instagram', color: '#E1306C' },
-        { href: '#', src: '/twitter.svg', alt: 'Twitter', color: '#1DA1F2' },
-        { href: '#', src: '/linkedin.svg', alt: 'LinkedIn', color: '#0A66C2' },
-        { href: '#', src: '/rabbit.svg', alt: 'Reddit', color: '#FF4500' },
+        // { href: '#', src: '/twitter.svg', alt: 'Twitter', color: '#1DA1F2' },
+        // { href: '#', src: '/linkedin.svg', alt: 'LinkedIn', color: '#0A66C2' },
+        // { href: '#', src: '/rabbit.svg', alt: 'Reddit', color: '#FF4500' },
     ];
     return (
         <Box
@@ -35,7 +35,7 @@ const Footer: React.FC = () => {
                         <Typography fontSize={{ md: "13px", lg: "18px" }} fontFamily={"Barlow"} fontWeight={'500'} color={"#2A2A2A"}>
                             Help us get the word out. LinkedGolf is here!
                         </Typography>
-                        {/* <Box mt={2} display="flex" gap={1}>
+                        <Box mt={2} display="flex" gap={1}>
                             {socialMediaIcons.map((icon, index) => (
                                 <IconButton
                                     key={index}
@@ -58,7 +58,7 @@ const Footer: React.FC = () => {
                                     />
                                 </IconButton>
                             ))}
-                        </Box> */}
+                        </Box>
                     </Grid>
                     <Grid item xs={12} md={4} display="flex" flexDirection={{ md: "row", lg: "column" }} gap={{ lg: '20px' }} justifyContent={"space-between"} alignItems={{ xs: 'center', md: 'center' }}>
                         <Link href="/deleteAccount" underline="none" fontSize={{ md: "14px", lg: "20px" }} fontFamily={"Barlow"} fontWeight={'500'} color="primary" sx={{ mb: 1, '&:hover': { textDecoration: 'underline' } }}>
